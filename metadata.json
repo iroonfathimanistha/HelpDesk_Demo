@@ -1,0 +1,6 @@
+{
+  "name": "HelpDesk — On-Demand Skilled Services Platform",
+  "description": "AI-powered on-demand skilled home-services platform for Sri Lanka connecting customers, service providers, and administrators.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
