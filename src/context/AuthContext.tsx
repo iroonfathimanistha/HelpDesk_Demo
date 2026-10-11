@@ -75,6 +75,7 @@ interface AuthContextType {
   register: (payload: any) => Promise<void>;
   logout: () => void;
   switchDemoAccount: (accountId: string) => Promise<void>;
+  switchMode: (targetRole: 'CUSTOMER' | 'PROVIDER') => Promise<void>;
   refreshMe: () => Promise<void>;
   setUnreadCount: React.Dispatch<React.SetStateAction<number>>;
 }
@@ -170,6 +171,19 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     setUnreadCount(0);
   };
 
+  const switchMode = async (targetRole: 'CUSTOMER' | 'PROVIDER') => {
+    setIsLoading(true);
+    try {
+      const res = await api.switchMode(targetRole);
+      setUser(res.user);
+      if (res.providerProfile) {
+        setProviderProfile(res.providerProfile);
+      }
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
   const switchDemoAccount = async (accountId: string) => {
     const account = DEMO_ACCOUNTS.find(a => a.id === accountId);
     if (!account) return;
@@ -187,6 +201,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
         register,
         logout,
         switchDemoAccount,
+        switchMode,
         refreshMe,
         setUnreadCount
       }}

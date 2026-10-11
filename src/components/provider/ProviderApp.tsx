@@ -36,15 +36,17 @@ import {
 } from 'lucide-react';
 import { CategoryIcon } from '../common/CategoryIcons';
 import { ActionButton } from '../common/ActionButton';
+import { ProviderVerificationPendingScreen } from './ProviderVerificationPendingScreen';
 
 interface Props {
   initialBookingId?: string | null;
+  onSwitchToCustomerMode?: () => void;
 }
 
 export type ProviderTab = 'dashboard' | 'requests' | 'jobs' | 'earnings' | 'profile';
 
-export const ProviderApp: React.FC<Props> = ({ initialBookingId }) => {
-  const { user, providerProfile, refreshMe } = useAuth();
+export const ProviderApp: React.FC<Props> = ({ initialBookingId, onSwitchToCustomerMode }) => {
+  const { user, providerProfile, refreshMe, switchMode, logout } = useAuth();
   const [activeTab, setActiveTab] = useState<ProviderTab>('dashboard');
   const [categories, setCategories] = useState<ServiceCategory[]>([]);
   const [incomingJobs, setIncomingJobs] = useState<any[]>([]);
@@ -322,6 +324,17 @@ export const ProviderApp: React.FC<Props> = ({ initialBookingId }) => {
   const netPayoutLkr = totalGrossLkr - totalCommissionLkr;
   const todayJobs = completedJobs.filter(j => new Date(j.updatedAt).toDateString() === new Date().toDateString());
   const todayNetLkr = todayJobs.reduce((sum, j) => sum + ((j.totalAmountLkr || 0) - (j.platformCommissionLkr || 0)), 0);
+
+  // If provider account is pending, rejected, or suspended, show the dedicated verification screen
+  if (providerProfile && providerProfile.verificationStatus !== 'APPROVED') {
+    return (
+      <div className="min-h-screen bg-slate-100 flex justify-center py-4 px-2 sm:px-4">
+        <div className="w-full max-w-md bg-white rounded-3xl shadow-2xl border border-slate-200 overflow-hidden flex flex-col h-[92vh]">
+          <ProviderVerificationPendingScreen />
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-slate-100 flex justify-center py-4 px-2 sm:px-4">
@@ -1021,6 +1034,44 @@ export const ProviderApp: React.FC<Props> = ({ initialBookingId }) => {
                     ))
                   )}
                 </div>
+              </div>
+
+              {/* Mode Switcher & Account Actions */}
+              <div className="bg-white p-4 rounded-3xl border border-slate-200 shadow-xs space-y-2">
+                <h4 className="text-xs font-bold text-slate-800 uppercase tracking-wider">Account Actions</h4>
+                
+                {(user?.roles?.includes('CUSTOMER') || user?.role === 'CUSTOMER') && (
+                  <button
+                    type="button"
+                    onClick={async () => {
+                      try {
+                        await switchMode('CUSTOMER');
+                        if (onSwitchToCustomerMode) {
+                          onSwitchToCustomerMode();
+                        }
+                      } catch (err: any) {
+                        alert('Switch mode error: ' + err.message);
+                      }
+                    }}
+                    className="w-full py-3 bg-blue-50 hover:bg-blue-100 text-blue-700 rounded-2xl text-xs font-bold transition flex items-center justify-center gap-2"
+                  >
+                    <UserIcon className="w-4 h-4" />
+                    <span>Switch to Customer Mode</span>
+                  </button>
+                )}
+
+                <button
+                  type="button"
+                  onClick={() => {
+                    if (window.confirm('Log out of HelpDesk Provider account?')) {
+                      logout();
+                    }
+                  }}
+                  className="w-full py-2.5 text-slate-500 hover:text-red-600 text-xs font-semibold flex items-center justify-center gap-1.5 transition"
+                >
+                  <X className="w-3.5 h-3.5" />
+                  <span>Log Out</span>
+                </button>
               </div>
 
             </div>

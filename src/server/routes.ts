@@ -38,7 +38,13 @@ export const authenticateToken = (req: AuthRequest, res: Response, next: NextFun
 
 export const requireRole = (roles: UserRole[]) => {
   return (req: AuthRequest, res: Response, next: NextFunction) => {
-    if (!req.user || !roles.includes(req.user.role)) {
+    if (!req.user) {
+      return res.status(403).json({ error: 'Access denied: user not authenticated' });
+    }
+    const userRole = req.user.role;
+    const userRoles = req.user.roles || [userRole];
+    const hasRole = roles.includes(userRole) || roles.some(r => userRoles.includes(r));
+    if (!hasRole) {
       return res.status(403).json({ error: 'Access denied: insufficient permissions' });
     }
     next();
@@ -186,6 +192,37 @@ router.get('/auth/me', authenticateToken, (req: AuthRequest, res: Response) => {
   });
 });
 
+// POST /api/auth/logout
+router.post('/auth/logout', authenticateToken, (req: AuthRequest, res: Response) => {
+  res.json({ message: 'Logged out successfully' });
+});
+
+// POST /api/auth/switch-mode
+router.post('/auth/switch-mode', authenticateToken, (req: AuthRequest, res: Response) => {
+  const { targetRole } = req.body;
+  const user = req.user!;
+  
+  if (!targetRole || !['CUSTOMER', 'PROVIDER'].includes(targetRole)) {
+    return res.status(400).json({ error: 'Target role must be CUSTOMER or PROVIDER' });
+  }
+
+  const authorizedRoles = user.roles || [user.role];
+  if (!authorizedRoles.includes(targetRole)) {
+    return res.status(403).json({ error: `Account does not have authorization for role ${targetRole}. You must register or apply first.` });
+  }
+
+  // Update activeRole on user
+  const updated = db.updateUser(user.id, { activeRole: targetRole });
+  const { passwordHash: _, ...safeUser } = updated || user;
+  const providerProfile = db.getProviderById(user.id);
+
+  res.json({
+    message: `Switched active mode to ${targetRole}`,
+    user: safeUser,
+    providerProfile
+  });
+});
+
 // ==================== USER PROFILE & SETTINGS ROUTES ====================
 
 // PUT /api/users/notification-preferences
@@ -279,6 +316,13 @@ router.get('/users/my-reviews', authenticateToken, (req: AuthRequest, res: Respo
   res.json(reviews);
 });
 
+// GET /api/users/me
+router.get('/users/me', authenticateToken, (req: AuthRequest, res: Response) => {
+  const user = req.user!;
+  const { passwordHash: _, ...safeUser } = user;
+  res.json(safeUser);
+});
+
 // PUT /api/users/me
 router.put('/users/me', authenticateToken, (req: AuthRequest, res: Response) => {
   const { name, phone, avatarUrl } = req.body;
@@ -339,8 +383,25 @@ router.get('/providers', (req: Request, res: Response) => {
   res.json(mapped);
 });
 
+// GET /api/providers/me
+router.get('/providers/me', authenticateToken, requireRole(['PROVIDER']), (req: AuthRequest, res: Response) => {
+  const profile = db.getProviderById(req.user!.id);
+  if (!profile) return res.status(404).json({ error: 'Provider profile not found' });
+  const user = db.findUserById(profile.userId);
+  res.json({
+    ...profile,
+    name: user?.name,
+    email: user?.email,
+    phone: user?.phone,
+    avatarUrl: user?.avatarUrl
+  });
+});
+
 // GET /api/providers/:id
 router.get('/providers/:id', (req: Request, res: Response) => {
+  if (req.params.id === 'me') {
+    return res.status(401).json({ error: 'Authentication required for /providers/me' });
+  }
   const provider = db.getProviderById(req.params.id);
   if (!provider) return res.status(404).json({ error: 'Provider not found' });
   const user = db.findUserById(provider.userId);
@@ -352,6 +413,37 @@ router.get('/providers/:id', (req: Request, res: Response) => {
     avatarUrl: user?.avatarUrl || '',
     reviews
   });
+});
+
+// POST /api/providers/verification
+router.post('/providers/verification', authenticateToken, requireRole(['PROVIDER']), (req: AuthRequest, res: Response) => {
+  const profile = db.getProviderById(req.user!.id);
+  if (!profile) return res.status(404).json({ error: 'Provider profile not found' });
+
+  const { nationalIdUrl, certificateUrl, policeReportUrl, experienceYears, bio, categoryIds, serviceAreas } = req.body;
+  const updated = db.updateProviderProfile(profile.id, {
+    ...(nationalIdUrl && { nationalIdUrl }),
+    ...(certificateUrl && { certificateUrl }),
+    ...(policeReportUrl && { policeReportUrl }),
+    ...(experienceYears !== undefined && { experienceYears: Number(experienceYears) }),
+    ...(bio && { bio }),
+    ...(categoryIds && { categoryIds }),
+    ...(serviceAreas && { serviceAreas }),
+    verificationStatus: 'PENDING_VERIFICATION',
+    verificationNotes: 'Updated verification documents re-submitted for administrative review.'
+  });
+
+  const admins = db.getAllUsers().filter(u => u.role === 'ADMIN');
+  admins.forEach(admin => {
+    db.createNotification({
+      userId: admin.id,
+      title: 'Provider Document Resubmission',
+      message: `${req.user!.name} re-submitted verification documents for review.`,
+      type: 'VERIFICATION'
+    });
+  });
+
+  res.json({ message: 'Verification application submitted successfully', profile: updated });
 });
 
 // PUT /api/providers/me

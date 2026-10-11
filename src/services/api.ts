@@ -84,6 +84,27 @@ class ApiClient {
     return this.request<{ user: User; providerProfile?: ProviderProfile }>('/auth/me');
   }
 
+  public async getUserMe(): Promise<User> {
+    return this.request<User>('/users/me');
+  }
+
+  public async logoutApi(): Promise<{ message: string }> {
+    try {
+      return await this.request<{ message: string }>('/auth/logout', { method: 'POST' });
+    } catch {
+      return { message: 'Logged out' };
+    } finally {
+      this.setToken(null);
+    }
+  }
+
+  public async switchMode(targetRole: 'CUSTOMER' | 'PROVIDER'): Promise<{ user: User; providerProfile?: ProviderProfile; message: string }> {
+    return this.request<{ user: User; providerProfile?: ProviderProfile; message: string }>('/auth/switch-mode', {
+      method: 'POST',
+      body: JSON.stringify({ targetRole })
+    });
+  }
+
   public logout() {
     this.setToken(null);
   }
@@ -167,6 +188,25 @@ class ApiClient {
 
   public async getProvider(id: string): Promise<any> {
     return this.request<any>(`/providers/${id}`);
+  }
+
+  public async getProviderMe(): Promise<ProviderProfile> {
+    return this.request<ProviderProfile>('/providers/me');
+  }
+
+  public async submitProviderVerification(payload: {
+    nationalIdUrl?: string;
+    certificateUrl?: string;
+    policeReportUrl?: string;
+    experienceYears?: number;
+    bio?: string;
+    categoryIds?: string[];
+    serviceAreas?: string[];
+  }): Promise<{ message: string; profile: ProviderProfile }> {
+    return this.request<{ message: string; profile: ProviderProfile }>('/providers/verification', {
+      method: 'POST',
+      body: JSON.stringify(payload)
+    });
   }
 
   public async updateProviderProfile(updates: Partial<ProviderProfile>): Promise<ProviderProfile> {

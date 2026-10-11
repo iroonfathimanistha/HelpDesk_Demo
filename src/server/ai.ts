@@ -92,13 +92,19 @@ User Problem Description:
         }
         parts.push({ text: prompt });
 
-        const response = await this.ai.models.generateContent({
-          model: 'gemini-3.8-flash',
+        const timeoutPromise = new Promise((_, reject) =>
+          setTimeout(() => reject(new Error('AI request timeout')), 3000)
+        );
+
+        const aiCallPromise = this.ai.models.generateContent({
+          model: 'gemini-2.5-flash',
           contents: parts.length > 1 ? { parts } : prompt,
           config: {
             responseMimeType: 'application/json'
           }
         });
+
+        const response: any = await Promise.race([aiCallPromise, timeoutPromise]);
 
         const rawText = response.text || '';
         const parsed = JSON.parse(rawText);
@@ -137,13 +143,19 @@ Analyze this renovation or multi-trade project request and generate a structured
 Project description:
 """${projectOverview}"""`;
 
-        const response = await this.ai.models.generateContent({
-          model: 'gemini-3.8-flash',
+        const timeoutPromise = new Promise((_, reject) =>
+          setTimeout(() => reject(new Error('AI request timeout')), 3000)
+        );
+
+        const aiCallPromise = this.ai.models.generateContent({
+          model: 'gemini-2.5-flash',
           contents: prompt,
           config: {
             responseMimeType: 'application/json'
           }
         });
+
+        const response: any = await Promise.race([aiCallPromise, timeoutPromise]);
 
         const parsed = JSON.parse(response.text || '{}');
         return {

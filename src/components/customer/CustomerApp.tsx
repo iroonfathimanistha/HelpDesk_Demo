@@ -71,10 +71,11 @@ export interface CustomerNavigation {
 interface CustomerAppProps {
   initialBookingId?: string | null;
   onClearInitialBooking?: () => void;
+  onSwitchToProviderMode?: () => void;
 }
 
-export const CustomerApp: React.FC<CustomerAppProps> = ({ initialBookingId, onClearInitialBooking }) => {
-  const { user, refreshMe, logout } = useAuth();
+export const CustomerApp: React.FC<CustomerAppProps> = ({ initialBookingId, onClearInitialBooking, onSwitchToProviderMode }) => {
+  const { user, refreshMe, logout, switchMode } = useAuth();
 
   // Navigation Stack State
   const [routeStack, setRouteStack] = useState<CustomerNavigationRoute[]>([
@@ -1527,6 +1528,32 @@ export const CustomerApp: React.FC<CustomerAppProps> = ({ initialBookingId, onCl
               {/* Settings, Support, and Legal Actions Menu */}
               <div className="bg-white rounded-3xl border border-slate-200 shadow-xs divide-y divide-slate-100 overflow-hidden text-xs">
                 
+                {/* Multi-role Mode Switch if authorized */}
+                {(user?.roles?.includes('PROVIDER') || user?.role === 'PROVIDER') && (
+                  <button
+                    onClick={async () => {
+                      try {
+                        await switchMode('PROVIDER');
+                        if (onSwitchToProviderMode) {
+                          onSwitchToProviderMode();
+                        }
+                      } catch (err: any) {
+                        alert('Switch mode error: ' + err.message);
+                      }
+                    }}
+                    className="w-full p-3.5 flex items-center justify-between text-left hover:bg-teal-50 bg-teal-50/40 text-teal-800 transition"
+                  >
+                    <div className="flex items-center gap-2.5">
+                      <Briefcase className="w-4 h-4 text-teal-600" />
+                      <div>
+                        <span className="font-bold text-slate-900 block">Switch to Provider Mode</span>
+                        <span className="text-[11px] text-teal-700">Access technician dispatch & job radar</span>
+                      </div>
+                    </div>
+                    <ChevronRight className="w-4 h-4 text-teal-600" />
+                  </button>
+                )}
+
                 {/* Dedicated Settings Screen Option */}
                 <button
                   onClick={() => navigate('SettingsScreen', { initialSubView: 'main' })}

@@ -18,7 +18,7 @@ import {
 } from 'lucide-react';
 import { api } from '../../services/api';
 
-export type ActivePanel = 'customer' | 'provider' | 'admin' | 'sync';
+export type ActivePanel = 'welcome' | 'customer' | 'provider' | 'admin' | 'sync';
 
 interface Props {
   activePanel: ActivePanel;
@@ -27,10 +27,11 @@ interface Props {
 }
 
 export const NavigationHeader: React.FC<Props> = ({ activePanel, onSelectPanel, onSelectBooking }) => {
-  const { user, providerProfile, logout, switchDemoAccount, unreadCount, refreshMe } = useAuth();
+  const { user, providerProfile, logout, switchDemoAccount, switchMode, unreadCount, refreshMe } = useAuth();
   const [showAccountsDropdown, setShowAccountsDropdown] = useState(false);
   const [showNotifModal, setShowNotifModal] = useState(false);
   const [isResetting, setIsResetting] = useState(false);
+  const [isSwitchingMode, setIsSwitchingMode] = useState(false);
 
   const handleResetData = async () => {
     if (!confirm('Reset all demo data back to default initial state?')) return;
@@ -47,14 +48,26 @@ export const NavigationHeader: React.FC<Props> = ({ activePanel, onSelectPanel, 
     }
   };
 
+  const handleToggleMode = async (targetRole: 'CUSTOMER' | 'PROVIDER') => {
+    setIsSwitchingMode(true);
+    try {
+      await switchMode(targetRole);
+      onSelectPanel(targetRole === 'CUSTOMER' ? 'customer' : 'provider');
+    } catch (err: any) {
+      alert('Mode switch: ' + err.message);
+    } finally {
+      setIsSwitchingMode(false);
+    }
+  };
+
   const handleSwitchAccount = async (id: string) => {
     setShowAccountsDropdown(false);
     await switchDemoAccount(id);
     const acc = DEMO_ACCOUNTS.find(a => a.id === id);
     if (acc) {
-      if (acc.role === 'CUSTOMER' && activePanel === 'admin') {
+      if (acc.role === 'CUSTOMER') {
         onSelectPanel('customer');
-      } else if (acc.role === 'PROVIDER' && activePanel === 'admin') {
+      } else if (acc.role === 'PROVIDER') {
         onSelectPanel('provider');
       } else if (acc.role === 'ADMIN') {
         onSelectPanel('admin');
@@ -87,8 +100,21 @@ export const NavigationHeader: React.FC<Props> = ({ activePanel, onSelectPanel, 
             </div>
           </div>
 
-          {/* Panel Switcher (The 3 connected panels + dual sync view) */}
+          {/* Panel Switcher (The 3 connected panels + dual sync view + welcome portal) */}
           <div className="flex items-center bg-slate-800/90 p-1 rounded-xl border border-slate-700/80 shadow-inner">
+            <button
+              onClick={() => onSelectPanel('welcome')}
+              className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold transition ${
+                activePanel === 'welcome'
+                  ? 'bg-blue-600 text-white shadow-sm'
+                  : 'text-slate-300 hover:text-white hover:bg-slate-700/50'
+              }`}
+              title="Welcome screen and role selection flow"
+            >
+              <Sparkles className="w-3.5 h-3.5 text-blue-300" />
+              <span>Welcome / Auth</span>
+            </button>
+
             <button
               onClick={() => onSelectPanel('customer')}
               className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold transition ${
@@ -224,6 +250,44 @@ export const NavigationHeader: React.FC<Props> = ({ activePanel, onSelectPanel, 
                       );
                     })}
                   </div>
+
+                  {/* Multi-role Mode Switcher if authorized */}
+                  {user && (user.roles?.includes('PROVIDER') || user.role === 'PROVIDER') && (
+                    <div className="p-2 border-b border-slate-700/80 bg-slate-900/60 rounded-xl my-1">
+                      <div className="text-[10px] uppercase tracking-wider font-bold text-slate-400 mb-1 flex items-center justify-between">
+                        <span>Authorized Mode Switch:</span>
+                        <span className="text-emerald-400 font-bold">Multi-Role Active</span>
+                      </div>
+                      <div className="grid grid-cols-2 gap-1.5">
+                        <button
+                          type="button"
+                          onClick={() => handleToggleMode('CUSTOMER')}
+                          disabled={isSwitchingMode || activePanel === 'customer'}
+                          className={`py-1.5 px-2 rounded-lg text-xs font-bold transition flex items-center justify-center gap-1 ${
+                            activePanel === 'customer'
+                              ? 'bg-blue-600 text-white shadow-xs'
+                              : 'bg-slate-800 text-slate-300 hover:text-white hover:bg-slate-700'
+                          }`}
+                        >
+                          <Smartphone className="w-3 h-3" />
+                          <span>Customer</span>
+                        </button>
+                        <button
+                          type="button"
+                          onClick={() => handleToggleMode('PROVIDER')}
+                          disabled={isSwitchingMode || activePanel === 'provider'}
+                          className={`py-1.5 px-2 rounded-lg text-xs font-bold transition flex items-center justify-center gap-1 ${
+                            activePanel === 'provider'
+                              ? 'bg-teal-600 text-white shadow-xs'
+                              : 'bg-slate-800 text-slate-300 hover:text-white hover:bg-slate-700'
+                          }`}
+                        >
+                          <Briefcase className="w-3 h-3" />
+                          <span>Provider</span>
+                        </button>
+                      </div>
+                    </div>
+                  )}
 
                   {/* Reset Seed Button */}
                   <div className="pt-2 mt-1 border-t border-slate-700 flex items-center justify-between px-1">

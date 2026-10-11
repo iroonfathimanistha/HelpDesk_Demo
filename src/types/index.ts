@@ -45,6 +45,8 @@ export interface User {
   email: string;
   passwordHash: string;
   role: UserRole;
+  roles?: UserRole[];
+  activeRole?: UserRole;
   phone: string;
   avatarUrl: string;
   status: UserStatus;

@@ -1,19 +1,56 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { AuthProvider, useAuth } from './context/AuthContext';
 import { NavigationHeader, ActivePanel } from './components/common/NavigationHeader';
 import { CustomerApp } from './components/customer/CustomerApp';
 import { ProviderApp } from './components/provider/ProviderApp';
 import { AdminDashboard } from './components/admin/AdminDashboard';
 import { DualView } from './components/sync/DualView';
+import { WelcomeScreen } from './components/common/WelcomeScreen';
 
 function AppContent() {
+  const { user, providerProfile, isLoading } = useAuth();
   const [activePanel, setActivePanel] = useState<ActivePanel>('customer');
   const [targetBookingId, setTargetBookingId] = useState<string | null>(null);
+
+  // Sync activePanel with authenticated user's actual role / activeRole on bootstrap or login
+  useEffect(() => {
+    if (!user) {
+      // If not logged in, default to welcome screen
+      setActivePanel('welcome');
+    } else {
+      const effectiveRole = user.activeRole || user.role;
+      if (effectiveRole === 'ADMIN') {
+        setActivePanel('admin');
+      } else if (effectiveRole === 'PROVIDER') {
+        setActivePanel('provider');
+      } else {
+        setActivePanel('customer');
+      }
+    }
+  }, [user?.id, user?.activeRole, user?.role]);
 
   const handleSelectBookingFromNotif = (bookingId: string) => {
     setTargetBookingId(bookingId);
     setActivePanel('customer');
   };
+
+  const handleRolePerspectiveSelected = (role: 'CUSTOMER' | 'PROVIDER' | 'ADMIN') => {
+    if (role === 'ADMIN') setActivePanel('admin');
+    else if (role === 'PROVIDER') setActivePanel('provider');
+    else setActivePanel('customer');
+  };
+
+  if (isLoading) {
+    return (
+      <div className="min-h-screen bg-slate-900 flex flex-col items-center justify-center p-4 text-white">
+        <div className="w-12 h-12 rounded-2xl bg-gradient-to-tr from-blue-600 to-teal-400 flex items-center justify-center animate-pulse mb-3 shadow-lg shadow-blue-500/30">
+          <span className="font-extrabold text-lg">HD</span>
+        </div>
+        <h2 className="text-base font-bold">Restoring HelpDesk Session...</h2>
+        <p className="text-xs text-slate-400 mt-1">Verifying authenticated role and permissions</p>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-slate-100 flex flex-col text-slate-900 font-sans antialiased selection:bg-blue-600 selection:text-white">
@@ -29,16 +66,25 @@ function AppContent() {
 
       {/* Main Panel Viewport */}
       <main className="flex-1 w-full">
+        {activePanel === 'welcome' && (
+          <WelcomeScreen
+            onSelectRolePerspective={handleRolePerspectiveSelected}
+            onOpenAdminPortal={() => setActivePanel('admin')}
+          />
+        )}
+
         {activePanel === 'customer' && (
           <CustomerApp
             initialBookingId={targetBookingId}
             onClearInitialBooking={() => setTargetBookingId(null)}
+            onSwitchToProviderMode={() => setActivePanel('provider')}
           />
         )}
 
         {activePanel === 'provider' && (
           <ProviderApp
             initialBookingId={targetBookingId}
+            onSwitchToCustomerMode={() => setActivePanel('customer')}
           />
         )}
 

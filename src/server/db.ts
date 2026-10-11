@@ -934,6 +934,16 @@ class Database {
         if (!loaded.chatMessages) {
           loaded.chatMessages = [...INITIAL_CHAT_MESSAGES];
         }
+        if (Array.isArray(loaded.users)) {
+          loaded.users.forEach((u: any) => {
+            if (!u.roles || !Array.isArray(u.roles)) {
+              u.roles = u.role === 'PROVIDER' ? ['CUSTOMER', 'PROVIDER'] : [u.role];
+            }
+            if (!u.activeRole) {
+              u.activeRole = u.role;
+            }
+          });
+        }
         return loaded;
       } catch (err) {
         console.error('Failed to parse database file, re-seeding:', err);
@@ -984,9 +994,14 @@ class Database {
 
   public createUser(userData: Omit<User, 'id' | 'createdAt'>): User {
     const id = `usr-${Date.now()}-${Math.random().toString(36).substr(2, 5)}`;
+    const roles: UserRole[] = userData.roles && userData.roles.length > 0 
+      ? userData.roles 
+      : (userData.role === 'PROVIDER' ? ['CUSTOMER', 'PROVIDER'] : [userData.role]);
     const user: User = {
       ...userData,
       id,
+      roles,
+      activeRole: userData.activeRole || userData.role,
       createdAt: new Date().toISOString(),
       notificationPreferences: { ...DEFAULT_NOTIF_PREFS },
       appSettings: { ...DEFAULT_APP_SETTINGS }
