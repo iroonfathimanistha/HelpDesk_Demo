@@ -59,24 +59,40 @@ async function runTests() {
     const categories = await makeReq('GET', '/api/categories');
     assert(categories.status === 200 && Array.isArray(categories.body) && categories.body.length > 0, `Fetched ${categories.body?.length || 0} service categories`);
 
-    // 3. Customer registration
+    // 3. Customer registration via dedicated endpoint
     const testCustEmail = `customer_${Date.now()}@example.com`;
-    const custReg = await makeReq('POST', '/api/auth/register', {
+    const testPhone = `+9477${Math.floor(1000000 + Math.random() * 9000000)}`;
+    const custReg = await makeReq('POST', '/api/auth/register/customer', {
       name: 'Nimal Perera',
       email: testCustEmail,
       password: 'password123',
-      phone: '+94771234567',
-      role: 'CUSTOMER'
+      phone: testPhone
     });
-    assert(custReg.status === 201 && custReg.body.token, 'Customer registration succeeded with JWT token');
+    assert(custReg.status === 201 && custReg.body.token, 'Customer registration via /api/auth/register/customer succeeded with JWT token');
     const custToken = custReg.body.token;
 
-    // 4. Customer login
+    // 3b. Duplicate registration rejected
+    const dupReg = await makeReq('POST', '/api/auth/register/customer', {
+      name: 'Duplicate Attempt',
+      email: testCustEmail,
+      password: 'password123',
+      phone: testPhone
+    });
+    assert(dupReg.status === 400, 'Duplicate registration correctly rejected with 400 Bad Request');
+
+    // 4. Customer login via email
     const custLogin = await makeReq('POST', '/api/auth/login', {
       email: testCustEmail,
       password: 'password123'
     });
-    assert(custLogin.status === 200 && custLogin.body.user.email === testCustEmail, 'Customer login succeeded');
+    assert(custLogin.status === 200 && custLogin.body.user.email === testCustEmail, 'Customer login via email succeeded');
+
+    // 4b. Customer login via phone number
+    const custPhoneLogin = await makeReq('POST', '/api/auth/login', {
+      phone: testPhone,
+      password: 'password123'
+    });
+    assert(custPhoneLogin.status === 200 && custPhoneLogin.body.user.id === custLogin.body.user.id, 'Customer login via phone number succeeded');
 
     // 5. Customer profile update (PUT /api/users/me)
     const profileUpdate = await makeReq('PUT', '/api/users/me', {
@@ -129,12 +145,12 @@ async function runTests() {
 
     // 11. Provider Registration & Verification Check
     const testProvEmail = `provider_${Date.now()}@example.com`;
-    const provReg = await makeReq('POST', '/api/auth/register', {
+    const testProvPhone = `+9477${Math.floor(1000000 + Math.random() * 9000000)}`;
+    const provReg = await makeReq('POST', '/api/auth/register/provider', {
       name: 'Kamal Silva',
       email: testProvEmail,
       password: 'password123',
-      phone: '+94779876543',
-      role: 'PROVIDER',
+      phone: testProvPhone,
       serviceCategoryIds: ['cat-plumbing'],
       experienceYears: 5
     });

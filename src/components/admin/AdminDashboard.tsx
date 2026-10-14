@@ -28,12 +28,19 @@ import {
   Star,
   Settings,
   HelpCircle,
-  Menu
+  Menu,
+  Smartphone,
+  LogOut,
+  Shield
 } from 'lucide-react';
 import { CategoryIcon } from '../common/CategoryIcons';
 
-export const AdminDashboard: React.FC = () => {
-  const { user, switchDemoAccount, refreshMe } = useAuth();
+interface AdminDashboardProps {
+  onOpenMobileApp?: () => void;
+}
+
+export const AdminDashboard: React.FC<AdminDashboardProps> = ({ onOpenMobileApp }) => {
+  const { user, switchDemoAccount, refreshMe, logout } = useAuth();
   const [activeSection, setActiveSection] = useState<'overview' | 'verifications' | 'pricing' | 'bookings' | 'users' | 'complaints' | 'reviews'>('overview');
   
   const [stats, setStats] = useState<any | null>(null);
@@ -196,13 +203,77 @@ export const AdminDashboard: React.FC = () => {
             <ShieldCheck className="w-4 h-4" />
             Switch to Admin (Dilrukshi Alwis)
           </button>
+
+          {onOpenMobileApp && (
+            <button
+              onClick={onOpenMobileApp}
+              className="w-full py-2.5 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-xl font-bold text-xs transition flex items-center justify-center gap-2"
+            >
+              <Smartphone className="w-4 h-4" />
+              Return to User Mobile App
+            </button>
+          )}
         </div>
       </div>
     );
   }
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 py-6 space-y-6">
+    <div className="min-h-screen bg-slate-950 text-white flex flex-col selection:bg-purple-600 selection:text-white">
+      {/* Top Professional Web Admin Navigation Bar */}
+      <header className="sticky top-0 z-30 bg-slate-900 border-b border-slate-800 text-white px-6 py-3 shrink-0 flex items-center justify-between shadow-md">
+        <div className="flex items-center gap-3">
+          <div className="w-9 h-9 rounded-xl bg-purple-600 flex items-center justify-center shadow-md text-white font-bold">
+            <ShieldCheck className="w-5 h-5" />
+          </div>
+          <div>
+            <div className="flex items-center gap-2">
+              <span className="font-extrabold text-base tracking-tight text-white">HelpDesk Admin</span>
+              <span className="text-[10px] font-bold px-2 py-0.5 rounded bg-purple-900/60 text-purple-300 border border-purple-700/50">
+                HQ WEB CONSOLE
+              </span>
+            </div>
+            <p className="text-[11px] text-slate-400">Sri Lanka Operations Governance & Dispatch Audit</p>
+          </div>
+        </div>
+
+        <div className="flex items-center gap-3">
+          {onOpenMobileApp && (
+            <button
+              onClick={onOpenMobileApp}
+              className="flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs shadow-sm transition active:scale-95"
+              title="Launch Customer & Provider Mobile App"
+            >
+              <Smartphone className="w-4 h-4" />
+              <span>Launch Mobile App</span>
+            </button>
+          )}
+
+          <div className="h-6 w-px bg-slate-800" />
+
+          {/* Admin User Info */}
+          <div className="flex items-center gap-2.5">
+            <div className="w-8 h-8 rounded-full bg-purple-900/60 text-purple-300 border border-purple-500/40 flex items-center justify-center font-bold text-xs">
+              {user?.name?.charAt(0) || 'A'}
+            </div>
+            <div className="hidden md:block text-left">
+              <div className="text-xs font-bold text-white leading-tight">{user?.name || 'Administrator'}</div>
+              <div className="text-[10px] text-purple-400 font-medium">Operations Lead</div>
+            </div>
+          </div>
+
+          <button
+            onClick={logout}
+            className="p-2 text-slate-400 hover:text-red-400 hover:bg-slate-800 rounded-xl transition"
+            title="Log Out"
+          >
+            <LogOut className="w-4 h-4" />
+          </button>
+        </div>
+      </header>
+
+      {/* Main Admin Content Container */}
+      <div className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 py-6 space-y-6">
       
       {/* Top Title Banner */}
       <div className="bg-slate-900 text-white p-6 rounded-3xl shadow-lg border border-slate-800 flex flex-wrap items-center justify-between gap-4">
@@ -906,5 +977,6 @@ export const AdminDashboard: React.FC = () => {
       )}
 
     </div>
+  </div>
   );
 };

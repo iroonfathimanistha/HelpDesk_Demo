@@ -26,6 +26,7 @@ export const BookingProgressScreen: React.FC<BookingProgressScreenProps> = ({
       onBookingUpdated={onBookingUpdated}
       onBookAnother={onBookAnother}
       onReturnHome={onReturnHome}
+      hideTopHeader={true}
     />
   );
 };

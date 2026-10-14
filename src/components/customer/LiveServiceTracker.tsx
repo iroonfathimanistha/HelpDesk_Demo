@@ -40,6 +40,7 @@ interface Props {
   onBookingUpdated?: (booking: any) => void;
   onBookAnother?: () => void;
   onReturnHome?: () => void;
+  hideTopHeader?: boolean;
 }
 
 export const LiveServiceTracker: React.FC<Props> = ({
@@ -48,7 +49,8 @@ export const LiveServiceTracker: React.FC<Props> = ({
   onOpenChat,
   onBookingUpdated,
   onBookAnother,
-  onReturnHome
+  onReturnHome,
+  hideTopHeader
 }) => {
   const [booking, setBooking] = useState<any | null>(null);
   const [loading, setLoading] = useState(true);
@@ -358,29 +360,31 @@ export const LiveServiceTracker: React.FC<Props> = ({
     <div className="h-full flex flex-col bg-slate-50 overflow-hidden">
       
       {/* ==================== 1. COMPACT HEADER ==================== */}
-      <div className="bg-white border-b border-slate-200 px-4 py-3 flex items-center justify-between shadow-2xs shrink-0 z-20">
-        <button
-          onClick={onBack}
-          className="flex items-center gap-1.5 text-xs font-bold text-slate-700 hover:text-slate-900 transition"
-        >
-          <ArrowLeft className="w-4 h-4" />
-          <span>My Jobs</span>
-        </button>
+      {!hideTopHeader && (
+        <div className="bg-white border-b border-slate-200 px-4 py-3 flex items-center justify-between shadow-2xs shrink-0 z-20">
+          <button
+            onClick={onBack}
+            className="flex items-center gap-1.5 text-xs font-bold text-slate-700 hover:text-slate-900 transition"
+          >
+            <ArrowLeft className="w-4 h-4" />
+            <span>My Jobs</span>
+          </button>
 
-        <div className="text-center">
-          <span className="text-[10px] text-slate-400 font-bold uppercase tracking-wider block">Service Booking</span>
-          <span className="text-xs font-extrabold text-slate-900">{booking.bookingReference}</span>
+          <div className="text-center">
+            <span className="text-[10px] text-slate-400 font-bold uppercase tracking-wider block">Service Booking</span>
+            <span className="text-xs font-extrabold text-slate-900">{booking.bookingReference}</span>
+          </div>
+
+          <button
+            onClick={() => fetchBooking()}
+            disabled={refreshing}
+            className="p-1.5 text-slate-500 hover:text-blue-600 rounded-lg hover:bg-slate-100 transition"
+            title="Refresh booking"
+          >
+            <RotateCw className={`w-3.5 h-3.5 ${refreshing ? 'animate-spin text-blue-600' : ''}`} />
+          </button>
         </div>
-
-        <button
-          onClick={() => fetchBooking()}
-          disabled={refreshing}
-          className="p-1.5 text-slate-500 hover:text-blue-600 rounded-lg hover:bg-slate-100 transition"
-          title="Refresh booking"
-        >
-          <RotateCw className={`w-3.5 h-3.5 ${refreshing ? 'animate-spin text-blue-600' : ''}`} />
-        </button>
-      </div>
+      )}
 
       {/* Main Scrollable Viewport */}
       <div className="flex-1 overflow-y-auto space-y-3.5 p-3.5 sm:p-4">

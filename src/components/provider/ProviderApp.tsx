@@ -37,15 +37,17 @@ import {
 import { CategoryIcon } from '../common/CategoryIcons';
 import { ActionButton } from '../common/ActionButton';
 import { ProviderVerificationPendingScreen } from './ProviderVerificationPendingScreen';
+import { ProviderMobileHeader } from '../mobile/ProviderMobileHeader';
 
 interface Props {
   initialBookingId?: string | null;
   onSwitchToCustomerMode?: () => void;
+  onOpenAdminPortal?: () => void;
 }
 
 export type ProviderTab = 'dashboard' | 'requests' | 'jobs' | 'earnings' | 'profile';
 
-export const ProviderApp: React.FC<Props> = ({ initialBookingId, onSwitchToCustomerMode }) => {
+export const ProviderApp: React.FC<Props> = ({ initialBookingId, onSwitchToCustomerMode, onOpenAdminPortal }) => {
   const { user, providerProfile, refreshMe, switchMode, logout } = useAuth();
   const [activeTab, setActiveTab] = useState<ProviderTab>('dashboard');
   const [categories, setCategories] = useState<ServiceCategory[]>([]);
@@ -328,67 +330,42 @@ export const ProviderApp: React.FC<Props> = ({ initialBookingId, onSwitchToCusto
   // If provider account is pending, rejected, or suspended, show the dedicated verification screen
   if (providerProfile && providerProfile.verificationStatus !== 'APPROVED') {
     return (
-      <div className="min-h-screen bg-slate-100 flex justify-center py-4 px-2 sm:px-4">
-        <div className="w-full max-w-md bg-white rounded-3xl shadow-2xl border border-slate-200 overflow-hidden flex flex-col h-[92vh]">
-          <ProviderVerificationPendingScreen />
-        </div>
+      <div className="flex-1 flex flex-col h-full bg-white relative overflow-hidden">
+        <ProviderVerificationPendingScreen />
       </div>
     );
   }
 
   return (
-    <div className="min-h-screen bg-slate-100 flex justify-center py-4 px-2 sm:px-4">
-      {/* Mobile Device Frame */}
-      <div className="w-full max-w-md bg-white rounded-3xl shadow-2xl border border-slate-200 overflow-hidden flex flex-col h-[92vh]">
+    <div className="flex-1 flex flex-col h-full bg-white relative overflow-hidden">
+      {/* Top Mobile Header */}
+      <ProviderMobileHeader
+        screenTitle={
+          activeTab === 'dashboard' ? undefined :
+          activeTab === 'requests' ? 'Job Requests' :
+          activeTab === 'jobs' ? 'Active Jobs' :
+          activeTab === 'earnings' ? 'Earnings & Payouts' :
+          'Provider Profile'
+        }
+        canGoBack={activeTab !== 'dashboard'}
+        onGoBack={() => setActiveTab('dashboard')}
+        onOpenNotifications={() => {}}
+        onOpenProfile={() => setActiveTab('profile')}
+        isOnline={isOnline}
+        onToggleOnline={handleToggleOnline}
+        isDashboard={activeTab === 'dashboard'}
+      />
 
-        {/* Top Header */}
-        <div className="bg-slate-900 text-white px-5 pt-4 pb-3 flex items-center justify-between shadow-sm shrink-0">
-          <div className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded-lg bg-teal-600 flex items-center justify-center font-bold text-sm shadow-xs">
-              PRO
-            </div>
-            <div>
-              <span className="text-[10px] text-slate-400 block font-medium uppercase tracking-wider">HelpDesk Partner</span>
-              <span className="text-sm font-bold text-white flex items-center gap-1.5">
-                {user?.name || 'Technician'}
-                {providerProfile?.verificationStatus === 'APPROVED' && (
-                  <ShieldCheck className="w-3.5 h-3.5 text-emerald-400" />
-                )}
-              </span>
-            </div>
-          </div>
-
-          {/* Availability Toggle */}
-          <div className="flex items-center gap-2">
-            <button
-              onClick={handleToggleOnline}
-              disabled={providerProfile?.verificationStatus !== 'APPROVED'}
-              className={`flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold transition border ${
-                isOnline && providerProfile?.verificationStatus === 'APPROVED'
-                  ? 'bg-emerald-500/20 text-emerald-300 border-emerald-500/40 shadow-xs'
-                  : 'bg-slate-800 text-slate-400 border-slate-700'
-              }`}
-            >
-              <span className={`w-2 h-2 rounded-full ${
-                isOnline && providerProfile?.verificationStatus === 'APPROVED'
-                  ? 'bg-emerald-400 animate-ping'
-                  : 'bg-slate-500'
-              }`} />
-              <span>{isOnline && providerProfile?.verificationStatus === 'APPROVED' ? 'ONLINE' : 'OFFLINE'}</span>
-            </button>
+      {/* Verification Status Warning if pending */}
+      {providerProfile?.verificationStatus === 'PENDING_VERIFICATION' && (
+        <div className="bg-amber-500 text-slate-950 px-4 py-2.5 flex items-start gap-2.5 text-xs font-medium shadow-inner shrink-0">
+          <AlertTriangle className="w-4 h-4 text-slate-950 shrink-0 mt-0.5" />
+          <div>
+            <strong className="font-bold">Pending Administrative Review: </strong>
+            Your national ID and credentials are currently being inspected by Admin. You cannot go online or accept bookings until approved.
           </div>
         </div>
-
-        {/* Verification Status Warning if pending */}
-        {providerProfile?.verificationStatus === 'PENDING_VERIFICATION' && (
-          <div className="bg-amber-500 text-slate-950 px-4 py-2.5 flex items-start gap-2.5 text-xs font-medium shadow-inner shrink-0">
-            <AlertTriangle className="w-4 h-4 text-slate-950 shrink-0 mt-0.5" />
-            <div>
-              <strong className="font-bold">Pending Administrative Review: </strong>
-              Your national ID and credentials are currently being inspected by Admin. You cannot go online or accept bookings until approved.
-            </div>
-          </div>
-        )}
+      )}
 
         {/* Scrollable View Area */}
         <div className="flex-1 overflow-y-auto bg-slate-50">
@@ -539,11 +516,8 @@ export const ProviderApp: React.FC<Props> = ({ initialBookingId, onSwitchToCusto
           {activeTab === 'requests' && (
             <div className="p-4 space-y-4">
               
-              <div className="flex items-center justify-between">
-                <div>
-                  <h3 className="text-sm font-bold text-slate-900">Job Requests Radar</h3>
-                  <p className="text-xs text-slate-500">Matching your certified categories</p>
-                </div>
+              <div className="flex items-center justify-between px-1">
+                <p className="text-xs text-slate-500 font-medium">Matching your certified categories</p>
                 <button
                   onClick={loadProviderData}
                   className="p-1.5 bg-white border border-slate-200 rounded-xl hover:bg-slate-50 transition"
@@ -1060,6 +1034,17 @@ export const ProviderApp: React.FC<Props> = ({ initialBookingId, onSwitchToCusto
                   </button>
                 )}
 
+                {onOpenAdminPortal && (
+                  <button
+                    type="button"
+                    onClick={onOpenAdminPortal}
+                    className="w-full py-3 bg-purple-50 hover:bg-purple-100 text-purple-700 rounded-2xl text-xs font-bold transition flex items-center justify-center gap-2"
+                  >
+                    <Briefcase className="w-4 h-4" />
+                    <span>Open Admin Web Portal</span>
+                  </button>
+                )}
+
                 <button
                   type="button"
                   onClick={() => {
@@ -1142,9 +1127,7 @@ export const ProviderApp: React.FC<Props> = ({ initialBookingId, onSwitchToCusto
           </button>
         </div>
 
-      </div>
-
-      {/* ==================== MODAL: PROPOSE EXTRA CHARGE ==================== */}
+        {/* ==================== MODAL: PROPOSE EXTRA CHARGE ==================== */}
       {showProposalModal && (
         <div className="fixed inset-0 z-50 bg-black/60 backdrop-blur-xs flex items-center justify-center p-4">
           <div className="bg-white w-full max-w-sm rounded-3xl p-5 shadow-2xl border border-slate-200 space-y-4">
@@ -1517,7 +1500,6 @@ export const ProviderApp: React.FC<Props> = ({ initialBookingId, onSwitchToCusto
           </div>
         </div>
       )}
-
     </div>
   );
 };

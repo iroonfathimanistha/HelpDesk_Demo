@@ -988,6 +988,26 @@ class Database {
     return this.state.users.find(u => u.email.toLowerCase() === email.toLowerCase());
   }
 
+  public findUserByPhone(phone: string): User | undefined {
+    const cleanPhone = phone.replace(/[^0-9]/g, '');
+    if (!cleanPhone) return undefined;
+    return this.state.users.find(u => {
+      const userPhone = (u.phone || '').replace(/[^0-9]/g, '');
+      return userPhone === cleanPhone || userPhone.endsWith(cleanPhone) || cleanPhone.endsWith(userPhone);
+    });
+  }
+
+  public findUserByIdentifier(identifier: string): User | undefined {
+    if (!identifier) return undefined;
+    const trimmed = identifier.trim();
+    if (trimmed.includes('@')) {
+      return this.findUserByEmail(trimmed);
+    }
+    const byPhone = this.findUserByPhone(trimmed);
+    if (byPhone) return byPhone;
+    return this.findUserByEmail(trimmed);
+  }
+
   public findUserById(id: string): User | undefined {
     return this.state.users.find(u => u.id === id);
   }

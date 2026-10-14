@@ -36,6 +36,8 @@ import {
   RotateCw
 } from 'lucide-react';
 
+import { CustomerMobileHeader } from '../mobile/CustomerMobileHeader';
+
 // ==================== NAVIGATION TYPES ====================
 
 export type CustomerScreenName = 
@@ -72,9 +74,10 @@ interface CustomerAppProps {
   initialBookingId?: string | null;
   onClearInitialBooking?: () => void;
   onSwitchToProviderMode?: () => void;
+  onOpenAdminPortal?: () => void;
 }
 
-export const CustomerApp: React.FC<CustomerAppProps> = ({ initialBookingId, onClearInitialBooking, onSwitchToProviderMode }) => {
+export const CustomerApp: React.FC<CustomerAppProps> = ({ initialBookingId, onClearInitialBooking, onSwitchToProviderMode, onOpenAdminPortal }) => {
   const { user, refreshMe, logout, switchMode } = useAuth();
 
   // Navigation Stack State
@@ -468,69 +471,59 @@ export const CustomerApp: React.FC<CustomerAppProps> = ({ initialBookingId, onCl
 
   // ------------------- SCREEN RENDERING ROUTER -------------------
 
+  const getScreenTitle = (): string => {
+    switch (currentRoute.name) {
+      case 'CreateServiceRequestScreen':
+        return 'Request a Service';
+      case 'BookingHistoryScreen':
+        return 'My Bookings';
+      case 'NotificationsScreen':
+        return 'Notifications';
+      case 'MessagesScreen':
+        return 'Messages';
+      case 'ProfileScreen':
+        return 'My Profile';
+      case 'SettingsScreen':
+        return 'Settings';
+      case 'ProviderDetailsScreen':
+        return 'Technician Profile';
+      case 'BookingProgressScreen':
+      case 'BookingProgress':
+        return 'Live Service Tracking';
+      default:
+        return 'HelpDesk';
+    }
+  };
+
   const activeTab = getActiveTab();
 
   return (
-    <div className="min-h-screen bg-slate-100 flex justify-center py-4 px-2 sm:px-4">
-      {/* Mobile Device Frame */}
-      <div className="w-full max-w-md bg-white rounded-3xl shadow-2xl border border-slate-200 overflow-hidden flex flex-col h-[92vh] relative">
+    <div className="flex-1 flex flex-col h-full bg-white relative overflow-hidden">
+      {/* Global Mobile Header (Hidden when inside full-screen BookingProgressScreen) */}
+      {currentRoute.name !== 'BookingProgressScreen' && currentRoute.name !== 'BookingProgress' && (
+        <CustomerMobileHeader
+          screenTitle={getScreenTitle()}
+          canGoBack={routeStack.length > 1 && currentRoute.name !== 'HomeScreen'}
+          onGoBack={goBack}
+          onOpenNotifications={() => navigate('NotificationsScreen')}
+          onOpenProfile={() => navigate('ProfileScreen')}
+          greeting={`Good day, ${user?.name ? user.name.split(' ')[0] : 'there'}`}
+          serviceAddress={formAddress}
+          onAddressClick={() => setShowAddAddressModal(true)}
+          isHomeScreen={currentRoute.name === 'HomeScreen'}
+        />
+      )}
 
-        {/* Global Mobile Header (Hidden when inside full-screen BookingProgressScreen) */}
-        {currentRoute.name !== 'BookingProgressScreen' && currentRoute.name !== 'BookingProgress' && (
-          <div className="bg-slate-900 text-white px-5 pt-4 pb-3 flex items-center justify-between shadow-sm shrink-0 z-10">
-            <div className="flex items-center gap-2">
-              <div className="w-8 h-8 rounded-lg bg-blue-600 flex items-center justify-center font-bold text-sm shadow-xs">
-                HD
-              </div>
-              <div>
-                <span className="text-[10px] text-slate-400 block font-medium uppercase tracking-wider">HelpDesk Sri Lanka</span>
-                <span className="text-sm font-bold text-white flex items-center gap-1">
-                  {user?.name?.split(' ')[0] || 'Customer'}
-                </span>
-              </div>
-            </div>
+      {/* Main Content Area */}
+      <div className="flex-1 overflow-y-auto bg-slate-50 flex flex-col">
 
-            <div className="flex items-center gap-2">
-              <div className="flex items-center gap-1 bg-slate-800 px-2.5 py-1 rounded-full text-[11px] text-slate-300 border border-slate-700">
-                <MapPin className="w-3 h-3 text-red-400" />
-                <span className="font-medium truncate max-w-[100px]">{formCity}</span>
-              </div>
-            </div>
-          </div>
-        )}
+        {/* ========================================================
+            SCREEN 1: HomeScreen
+           ======================================================== */}
+        {currentRoute.name === 'HomeScreen' && (
+          <div className="p-4 space-y-4">
 
-        {/* Main Content Area */}
-        <div className="flex-1 overflow-y-auto bg-slate-50 flex flex-col">
-
-          {/* ========================================================
-              SCREEN 1: HomeScreen
-             ======================================================== */}
-          {currentRoute.name === 'HomeScreen' && (
-            <div className="p-4 space-y-4">
-
-              {/* Service Address Selector Card */}
-              <div className="bg-white p-3 rounded-2xl border border-slate-200 shadow-xs flex items-center justify-between">
-                <div className="flex items-center gap-2.5">
-                  <div className="w-8 h-8 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center">
-                    <MapPin className="w-4 h-4" />
-                  </div>
-                  <div>
-                    <span className="text-[10px] text-slate-400 uppercase font-bold block">Service Address</span>
-                    <span className="text-xs font-bold text-slate-800 truncate max-w-[210px] block">
-                      {formAddress}
-                    </span>
-                  </div>
-                </div>
-
-                <button
-                  onClick={() => navigate('SettingsScreen', { initialSubView: 'account' })}
-                  className="text-xs font-semibold text-blue-600 hover:text-blue-800"
-                >
-                  Change
-                </button>
-              </div>
-
-              {/* Real-time Active Booking Banner (PickMe-style ongoing ride bar) */}
+            {/* Real-time Active Booking Banner (PickMe-style ongoing ride bar) */}
               {activeBooking && ['PENDING', 'ACCEPTED', 'ON_THE_WAY', 'ARRIVED', 'IN_PROGRESS', 'AWAITING_CUSTOMER_CONFIRMATION'].includes(activeBooking.status) && (
                 <div 
                   onClick={() => navigate('BookingProgressScreen', { requestId: activeBooking.id })}
@@ -722,19 +715,6 @@ export const CustomerApp: React.FC<CustomerAppProps> = ({ initialBookingId, onCl
              ======================================================== */}
           {currentRoute.name === 'CreateServiceRequestScreen' && (
             <div className="p-4 space-y-4">
-              
-              {/* Screen Header */}
-              <div className="flex items-center justify-between pb-2 border-b border-slate-200">
-                <button
-                  type="button"
-                  onClick={goBack}
-                  className="flex items-center gap-1 text-xs font-semibold text-slate-600 hover:text-slate-900"
-                >
-                  <ArrowLeft className="w-4 h-4" /> Back
-                </button>
-                <h3 className="text-sm font-bold text-slate-900">Create Service Request</h3>
-                <div className="w-8" />
-              </div>
 
               {/* Direct Booking Notice */}
               {formDirectProvider && (
@@ -1082,9 +1062,9 @@ export const CustomerApp: React.FC<CustomerAppProps> = ({ initialBookingId, onCl
              ======================================================== */}
           {currentRoute.name === 'BookingHistoryScreen' && (
             <div className="p-4 space-y-4">
-              <div className="flex items-center justify-between">
-                <h3 className="text-sm font-bold text-slate-900">My Service Requests</h3>
-                <span className="text-xs text-slate-500">{myBookings.length} total</span>
+              <div className="flex items-center justify-between text-xs text-slate-500 font-medium px-1">
+                <span>All recorded service jobs</span>
+                <span className="font-semibold text-slate-700">{myBookings.length} bookings</span>
               </div>
 
               {/* Filter Sub-Tabs */}
@@ -1174,13 +1154,10 @@ export const CustomerApp: React.FC<CustomerAppProps> = ({ initialBookingId, onCl
              ======================================================== */}
           {currentRoute.name === 'NotificationsScreen' && (
             <div className="p-4 space-y-3">
-              <div className="flex items-center justify-between">
-                <div>
-                  <h3 className="text-sm font-bold text-slate-900">Notifications & Alerts</h3>
-                  <span className="text-xs text-slate-400">
-                    {notifications.filter(n => !n.isRead).length} unread updates
-                  </span>
-                </div>
+              <div className="flex items-center justify-between px-1">
+                <span className="text-xs text-slate-500 font-medium">
+                  {notifications.filter(n => !n.isRead).length} unread updates
+                </span>
                 {notifications.some(n => !n.isRead) && (
                   <button
                     onClick={async () => {
@@ -1599,6 +1576,23 @@ export const CustomerApp: React.FC<CustomerAppProps> = ({ initialBookingId, onCl
                   <ChevronRight className="w-4 h-4 text-slate-400" />
                 </button>
 
+                {/* Admin Web Portal link */}
+                {onOpenAdminPortal && (
+                  <button
+                    onClick={onOpenAdminPortal}
+                    className="w-full p-3.5 flex items-center justify-between text-left hover:bg-purple-50 text-purple-700 transition"
+                  >
+                    <div className="flex items-center gap-2.5">
+                      <ShieldCheck className="w-4 h-4 text-purple-600" />
+                      <div>
+                        <span className="font-bold text-slate-900 block">Admin Web Portal</span>
+                        <span className="text-[11px] text-purple-600">Desktop operations & provider verification console</span>
+                      </div>
+                    </div>
+                    <ChevronRight className="w-4 h-4 text-purple-400" />
+                  </button>
+                )}
+
                 {/* Sign Out Button */}
                 <button
                   onClick={() => {
@@ -1653,10 +1647,6 @@ export const CustomerApp: React.FC<CustomerAppProps> = ({ initialBookingId, onCl
 
                 return (
                   <div className="space-y-4">
-                    <button onClick={goBack} className="flex items-center gap-1 text-xs font-semibold text-slate-600">
-                      <ArrowLeft className="w-4 h-4" /> Back to Search
-                    </button>
-
                     <div className="bg-white p-4 rounded-3xl border border-slate-200 shadow-xs space-y-3">
                       <div className="flex items-center gap-3">
                         <div className="w-16 h-16 rounded-2xl bg-blue-100 flex items-center justify-center font-bold text-blue-800 text-xl overflow-hidden">
@@ -1861,8 +1851,6 @@ export const CustomerApp: React.FC<CustomerAppProps> = ({ initialBookingId, onCl
             </div>
           </div>
         )}
-
-      </div>
     </div>
   );
 };

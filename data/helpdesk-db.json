@@ -1067,6 +1067,433 @@
         "locationPermission": true,
         "fontSize": "normal"
       }
+    },
+    {
+      "name": "Nimal S. Perera",
+      "email": "customer_1791986715604@example.com",
+      "passwordHash": "$2b$10$upoFYyFTFDv0yfHuBYtQouEpS5iPl95pyh5dWdtzW26/4dADFxz1K",
+      "role": "CUSTOMER",
+      "phone": "+94771234999",
+      "avatarUrl": "https://api.dicebear.com/7.x/initials/svg?seed=Nimal%20Perera",
+      "status": "ACTIVE",
+      "id": "usr-1791986715715-9zfrj",
+      "roles": [
+        "CUSTOMER"
+      ],
+      "activeRole": "CUSTOMER",
+      "createdAt": "2026-10-14T14:05:15.715Z",
+      "notificationPreferences": {
+        "bookingStatus": true,
+        "providerArrival": true,
+        "completionAndReview": true,
+        "promotions": false,
+        "inAppAlerts": true,
+        "pushEnabled": false
+      },
+      "appSettings": {
+        "language": "si",
+        "theme": "system",
+        "currency": "LKR",
+        "locationPermission": true,
+        "fontSize": "normal"
+      }
+    },
+    {
+      "name": "Kamal Silva",
+      "email": "provider_1791986716620@example.com",
+      "passwordHash": "$2b$10$r9aYyA8iz0uKL6exaSrO5OYPRTS6jy4jxWMBFqgaYm32kVC9Lk1Oq",
+      "role": "PROVIDER",
+      "phone": "+94779876543",
+      "avatarUrl": "https://api.dicebear.com/7.x/initials/svg?seed=Kamal%20Silva",
+      "status": "ACTIVE",
+      "id": "usr-1791986716709-ttgfo",
+      "roles": [
+        "CUSTOMER",
+        "PROVIDER"
+      ],
+      "activeRole": "CUSTOMER",
+      "createdAt": "2026-10-14T14:05:16.709Z",
+      "notificationPreferences": {
+        "bookingStatus": true,
+        "providerArrival": true,
+        "completionAndReview": true,
+        "promotions": false,
+        "inAppAlerts": true,
+        "pushEnabled": false
+      },
+      "appSettings": {
+        "language": "en",
+        "theme": "system",
+        "currency": "LKR",
+        "locationPermission": true,
+        "fontSize": "normal"
+      }
+    },
+    {
+      "name": "Nimal S. Perera",
+      "email": "customer_1791986798190@example.com",
+      "passwordHash": "$2b$10$NLzPYhA01S2qoOA7g2J/x.0C5YlZzlGbhWqY9KQAbfFiXtt2vKrxO",
+      "role": "CUSTOMER",
+      "phone": "+94771234999",
+      "avatarUrl": "https://api.dicebear.com/7.x/initials/svg?seed=Nimal%20Perera",
+      "status": "ACTIVE",
+      "id": "usr-1791986798292-xc4rb",
+      "roles": [
+        "CUSTOMER"
+      ],
+      "activeRole": "CUSTOMER",
+      "createdAt": "2026-10-14T14:06:38.292Z",
+      "notificationPreferences": {
+        "bookingStatus": true,
+        "providerArrival": true,
+        "completionAndReview": true,
+        "promotions": false,
+        "inAppAlerts": true,
+        "pushEnabled": false
+      },
+      "appSettings": {
+        "language": "si",
+        "theme": "system",
+        "currency": "LKR",
+        "locationPermission": true,
+        "fontSize": "normal"
+      }
+    },
+    {
+      "name": "Kamal Silva",
+      "email": "provider_1791986799153@example.com",
+      "passwordHash": "$2b$10$8/VAiizwXUo.0FdH9SxWd.BtSgRF32U5CrNFBAH9pUcasx1Y.o0w6",
+      "role": "PROVIDER",
+      "phone": "+94779876543",
+      "avatarUrl": "https://api.dicebear.com/7.x/initials/svg?seed=Kamal%20Silva",
+      "status": "ACTIVE",
+      "id": "usr-1791986799246-j2329",
+      "roles": [
+        "CUSTOMER",
+        "PROVIDER"
+      ],
+      "activeRole": "CUSTOMER",
+      "createdAt": "2026-10-14T14:06:39.246Z",
+      "notificationPreferences": {
+        "bookingStatus": true,
+        "providerArrival": true,
+        "completionAndReview": true,
+        "promotions": false,
+        "inAppAlerts": true,
+        "pushEnabled": false
+      },
+      "appSettings": {
+        "language": "en",
+        "theme": "system",
+        "currency": "LKR",
+        "locationPermission": true,
+        "fontSize": "normal"
+      }
+    },
+    {
+      "name": "Nimal S. Perera",
+      "email": "customer_1791986807573@example.com",
+      "passwordHash": "$2b$10$/nN5d4X.X4sYsW9Bv1NtxOkHAnp8f0CxVKvPmqJqqsIff/rakGeyq",
+      "role": "CUSTOMER",
+      "phone": "+94771234999",
+      "avatarUrl": "https://api.dicebear.com/7.x/initials/svg?seed=Nimal%20Perera",
+      "status": "ACTIVE",
+      "id": "usr-1791986807668-18fbz",
+      "roles": [
+        "CUSTOMER"
+      ],
+      "activeRole": "CUSTOMER",
+      "createdAt": "2026-10-14T14:06:47.668Z",
+      "notificationPreferences": {
+        "bookingStatus": true,
+        "providerArrival": true,
+        "completionAndReview": true,
+        "promotions": false,
+        "inAppAlerts": true,
+        "pushEnabled": false
+      },
+      "appSettings": {
+        "language": "si",
+        "theme": "system",
+        "currency": "LKR",
+        "locationPermission": true,
+        "fontSize": "normal"
+      }
+    },
+    {
+      "name": "Kamal Silva",
+      "email": "provider_1791986808497@example.com",
+      "passwordHash": "$2b$10$tD39ePg6l//kdgFkC05XbO/UTWQ7CE0SDfWKigr7tG/SOlfr5oJ4u",
+      "role": "PROVIDER",
+      "phone": "+94779876543",
+      "avatarUrl": "https://api.dicebear.com/7.x/initials/svg?seed=Kamal%20Silva",
+      "status": "ACTIVE",
+      "id": "usr-1791986808589-o92o6",
+      "roles": [
+        "CUSTOMER",
+        "PROVIDER"
+      ],
+      "activeRole": "CUSTOMER",
+      "createdAt": "2026-10-14T14:06:48.589Z",
+      "notificationPreferences": {
+        "bookingStatus": true,
+        "providerArrival": true,
+        "completionAndReview": true,
+        "promotions": false,
+        "inAppAlerts": true,
+        "pushEnabled": false
+      },
+      "appSettings": {
+        "language": "en",
+        "theme": "system",
+        "currency": "LKR",
+        "locationPermission": true,
+        "fontSize": "normal"
+      }
+    },
+    {
+      "name": "Nimal S. Perera",
+      "email": "customer_1791987107188@example.com",
+      "passwordHash": "$2b$10$TabWU7tJskPr2m9dX7URCuiQBJUPN614E0Bdqx0cv/Ye4VWmhAy.C",
+      "role": "CUSTOMER",
+      "phone": "+94771234999",
+      "avatarUrl": "https://api.dicebear.com/7.x/initials/svg?seed=Nimal%20Perera",
+      "status": "ACTIVE",
+      "id": "usr-1791987107308-we9us",
+      "roles": [
+        "CUSTOMER"
+      ],
+      "activeRole": "CUSTOMER",
+      "createdAt": "2026-10-14T14:11:47.308Z",
+      "notificationPreferences": {
+        "bookingStatus": true,
+        "providerArrival": true,
+        "completionAndReview": true,
+        "promotions": false,
+        "inAppAlerts": true,
+        "pushEnabled": false
+      },
+      "appSettings": {
+        "language": "si",
+        "theme": "system",
+        "currency": "LKR",
+        "locationPermission": true,
+        "fontSize": "normal"
+      }
+    },
+    {
+      "name": "Kamal Silva",
+      "email": "provider_1791987108409@example.com",
+      "passwordHash": "$2b$10$RA0Y.n4t8FklwtHs6iAzXeA1T62cWuxl7FAKB94WC0QCwVdjPF46q",
+      "role": "PROVIDER",
+      "phone": "+94779876543",
+      "avatarUrl": "https://api.dicebear.com/7.x/initials/svg?seed=Kamal%20Silva",
+      "status": "ACTIVE",
+      "id": "usr-1791987108509-kyfe1",
+      "roles": [
+        "CUSTOMER",
+        "PROVIDER"
+      ],
+      "activeRole": "CUSTOMER",
+      "createdAt": "2026-10-14T14:11:48.509Z",
+      "notificationPreferences": {
+        "bookingStatus": true,
+        "providerArrival": true,
+        "completionAndReview": true,
+        "promotions": false,
+        "inAppAlerts": true,
+        "pushEnabled": false
+      },
+      "appSettings": {
+        "language": "en",
+        "theme": "system",
+        "currency": "LKR",
+        "locationPermission": true,
+        "fontSize": "normal"
+      }
+    },
+    {
+      "name": "Kamal Silva",
+      "email": "provider_1791987719026@example.com",
+      "passwordHash": "$2b$10$6Jmq1hTqKxInedT3WrDU5uoR4aq169Ip820ohwSxlyzG7Vj1suKMS",
+      "role": "PROVIDER",
+      "phone": "+94779876543",
+      "avatarUrl": "https://api.dicebear.com/7.x/initials/svg?seed=Kamal%20Silva",
+      "status": "ACTIVE",
+      "id": "usr-1791987719175-kibq2",
+      "roles": [
+        "CUSTOMER",
+        "PROVIDER"
+      ],
+      "activeRole": "PROVIDER",
+      "createdAt": "2026-10-14T14:21:59.175Z",
+      "notificationPreferences": {
+        "bookingStatus": true,
+        "providerArrival": true,
+        "completionAndReview": true,
+        "promotions": false,
+        "inAppAlerts": true,
+        "pushEnabled": false
+      },
+      "appSettings": {
+        "language": "en",
+        "theme": "system",
+        "currency": "LKR",
+        "locationPermission": true,
+        "fontSize": "normal"
+      }
+    },
+    {
+      "name": "Nimal S. Perera",
+      "email": "customer_1791987727374@example.com",
+      "passwordHash": "$2b$10$GXZflK/VqQgkfPhwUKQGC.sVJA7ClP2.Abl6vrS.l9Yo79GWSz5Iy",
+      "role": "CUSTOMER",
+      "phone": "+94771234999",
+      "avatarUrl": "https://api.dicebear.com/7.x/initials/svg?seed=Nimal%20Perera",
+      "status": "ACTIVE",
+      "id": "usr-1791987727485-hfpfi",
+      "roles": [
+        "CUSTOMER"
+      ],
+      "activeRole": "CUSTOMER",
+      "createdAt": "2026-10-14T14:22:07.485Z",
+      "notificationPreferences": {
+        "bookingStatus": true,
+        "providerArrival": true,
+        "completionAndReview": true,
+        "promotions": false,
+        "inAppAlerts": true,
+        "pushEnabled": false
+      },
+      "appSettings": {
+        "language": "si",
+        "theme": "system",
+        "currency": "LKR",
+        "locationPermission": true,
+        "fontSize": "normal"
+      }
+    },
+    {
+      "name": "Nimal S. Perera",
+      "email": "customer_1791987744568@example.com",
+      "passwordHash": "$2b$10$3LsCC5wml85wDDjUZHcRmOVzZq8hSXaEo1iCilVY3AsGsaL73VI4q",
+      "role": "CUSTOMER",
+      "phone": "+94771234999",
+      "avatarUrl": "https://api.dicebear.com/7.x/initials/svg?seed=Nimal%20Perera",
+      "status": "ACTIVE",
+      "id": "usr-1791987744663-7gux7",
+      "roles": [
+        "CUSTOMER"
+      ],
+      "activeRole": "CUSTOMER",
+      "createdAt": "2026-10-14T14:22:24.663Z",
+      "notificationPreferences": {
+        "bookingStatus": true,
+        "providerArrival": true,
+        "completionAndReview": true,
+        "promotions": false,
+        "inAppAlerts": true,
+        "pushEnabled": false
+      },
+      "appSettings": {
+        "language": "si",
+        "theme": "system",
+        "currency": "LKR",
+        "locationPermission": true,
+        "fontSize": "normal"
+      }
+    },
+    {
+      "name": "Kamal Silva",
+      "email": "provider_1791987745529@example.com",
+      "passwordHash": "$2b$10$vLa1Rl1JIUgtzqW36Jgtp.KwKKXzag5TtVuU8/xNQwYjUMQSVhTpK",
+      "role": "PROVIDER",
+      "phone": "+94778791632",
+      "avatarUrl": "https://api.dicebear.com/7.x/initials/svg?seed=Kamal%20Silva",
+      "status": "ACTIVE",
+      "id": "usr-1791987745623-c6zrl",
+      "roles": [
+        "CUSTOMER",
+        "PROVIDER"
+      ],
+      "activeRole": "CUSTOMER",
+      "createdAt": "2026-10-14T14:22:25.623Z",
+      "notificationPreferences": {
+        "bookingStatus": true,
+        "providerArrival": true,
+        "completionAndReview": true,
+        "promotions": false,
+        "inAppAlerts": true,
+        "pushEnabled": false
+      },
+      "appSettings": {
+        "language": "en",
+        "theme": "system",
+        "currency": "LKR",
+        "locationPermission": true,
+        "fontSize": "normal"
+      }
+    },
+    {
+      "name": "Nimal S. Perera",
+      "email": "customer_1791987823827@example.com",
+      "passwordHash": "$2b$10$/o8Z6wnb4yRsz5I19.EJae.25KJQhjHaMw5Uvs.n9hZNOAdEZ9yD.",
+      "role": "CUSTOMER",
+      "phone": "+94771234999",
+      "avatarUrl": "https://api.dicebear.com/7.x/initials/svg?seed=Nimal%20Perera",
+      "status": "ACTIVE",
+      "id": "usr-1791987823925-k5wkn",
+      "roles": [
+        "CUSTOMER"
+      ],
+      "activeRole": "CUSTOMER",
+      "createdAt": "2026-10-14T14:23:43.925Z",
+      "notificationPreferences": {
+        "bookingStatus": true,
+        "providerArrival": true,
+        "completionAndReview": true,
+        "promotions": false,
+        "inAppAlerts": true,
+        "pushEnabled": false
+      },
+      "appSettings": {
+        "language": "si",
+        "theme": "system",
+        "currency": "LKR",
+        "locationPermission": true,
+        "fontSize": "normal"
+      }
+    },
+    {
+      "name": "Kamal Silva",
+      "email": "provider_1791987824856@example.com",
+      "passwordHash": "$2b$10$6fl/tUg6xKmU5wf7/lxwV.lTQeeRz/ysDaEyHy1E/7aNHUoSBQMRy",
+      "role": "PROVIDER",
+      "phone": "+94771925246",
+      "avatarUrl": "https://api.dicebear.com/7.x/initials/svg?seed=Kamal%20Silva",
+      "status": "ACTIVE",
+      "id": "usr-1791987824946-10uky",
+      "roles": [
+        "CUSTOMER",
+        "PROVIDER"
+      ],
+      "activeRole": "CUSTOMER",
+      "createdAt": "2026-10-14T14:23:44.947Z",
+      "notificationPreferences": {
+        "bookingStatus": true,
+        "providerArrival": true,
+        "completionAndReview": true,
+        "promotions": false,
+        "inAppAlerts": true,
+        "pushEnabled": false
+      },
+      "appSettings": {
+        "language": "en",
+        "theme": "system",
+        "currency": "LKR",
+        "locationPermission": true,
+        "fontSize": "normal"
+      }
     }
   ],
   "addresses": [
@@ -1245,6 +1672,83 @@
       "longitude": 79.8612,
       "isDefault": true,
       "id": "addr-1791689476038"
+    },
+    {
+      "userId": "usr-1791986715715-9zfrj",
+      "label": "Home Apartment",
+      "addressLine": "45 Galle Road, Bambalapitiya",
+      "district": "Colombo",
+      "city": "Colombo 04",
+      "latitude": 6.9271,
+      "longitude": 79.8612,
+      "isDefault": true,
+      "id": "addr-1791986715820"
+    },
+    {
+      "userId": "usr-1791986798292-xc4rb",
+      "label": "Home Apartment",
+      "addressLine": "45 Galle Road, Bambalapitiya",
+      "district": "Colombo",
+      "city": "Colombo 04",
+      "latitude": 6.9271,
+      "longitude": 79.8612,
+      "isDefault": true,
+      "id": "addr-1791986798412"
+    },
+    {
+      "userId": "usr-1791986807668-18fbz",
+      "label": "Home Apartment",
+      "addressLine": "45 Galle Road, Bambalapitiya",
+      "district": "Colombo",
+      "city": "Colombo 04",
+      "latitude": 6.9271,
+      "longitude": 79.8612,
+      "isDefault": true,
+      "id": "addr-1791986807771"
+    },
+    {
+      "userId": "usr-1791987107308-we9us",
+      "label": "Home Apartment",
+      "addressLine": "45 Galle Road, Bambalapitiya",
+      "district": "Colombo",
+      "city": "Colombo 04",
+      "latitude": 6.9271,
+      "longitude": 79.8612,
+      "isDefault": true,
+      "id": "addr-1791987107423"
+    },
+    {
+      "userId": "usr-1791987727485-hfpfi",
+      "label": "Home Apartment",
+      "addressLine": "45 Galle Road, Bambalapitiya",
+      "district": "Colombo",
+      "city": "Colombo 04",
+      "latitude": 6.9271,
+      "longitude": 79.8612,
+      "isDefault": true,
+      "id": "addr-1791987727690"
+    },
+    {
+      "userId": "usr-1791987744663-7gux7",
+      "label": "Home Apartment",
+      "addressLine": "45 Galle Road, Bambalapitiya",
+      "district": "Colombo",
+      "city": "Colombo 04",
+      "latitude": 6.9271,
+      "longitude": 79.8612,
+      "isDefault": true,
+      "id": "addr-1791987744882"
+    },
+    {
+      "userId": "usr-1791987823925-k5wkn",
+      "label": "Home Apartment",
+      "addressLine": "45 Galle Road, Bambalapitiya",
+      "district": "Colombo",
+      "city": "Colombo 04",
+      "latitude": 6.9271,
+      "longitude": 79.8612,
+      "isDefault": true,
+      "id": "addr-1791987824135"
     }
   ],
   "categories": [
@@ -2215,9 +2719,696 @@
       "verificationDate": "2026-10-11T03:31:16.940Z",
       "nationalIdUrl": "https://example.com/nic-verified.jpg",
       "certificateUrl": "https://example.com/nvq-plumbing.jpg"
+    },
+    {
+      "userId": "usr-1791986716709-ttgfo",
+      "businessName": "Kamal Silva Services",
+      "categoryIds": [
+        "cat-plumbing"
+      ],
+      "experienceYears": 6,
+      "bio": "Professional skilled technician registered on HelpDesk Sri Lanka.",
+      "serviceAreas": [
+        "Colombo 01-15"
+      ],
+      "workingHours": "8:00 AM - 6:00 PM",
+      "baseRateLkr": 1500,
+      "calloutFeeLkr": 1500,
+      "categoryPricing": {
+        "cat-plumbing": {
+          "categoryId": "cat-plumbing",
+          "baseCalloutFeeLkr": 1500,
+          "hourlyRateLkr": 1200,
+          "travelFeePerKmLkr": 50,
+          "lastUpdatedAt": "2026-10-14T14:05:16.711Z"
+        }
+      },
+      "languagesSpoken": [
+        "Sinhala",
+        "English"
+      ],
+      "preferredContactMethod": "PHONE",
+      "verificationStatus": "PENDING_VERIFICATION",
+      "verificationNotes": "Updated verification documents re-submitted for administrative review.",
+      "isOnline": false,
+      "portfolio": [],
+      "latitude": 6.9271,
+      "longitude": 79.8612,
+      "id": "prv-1791986716711",
+      "rating": 5,
+      "reviewCount": 1,
+      "completedJobsCount": 1,
+      "verificationDate": "2026-10-14T14:05:16.813Z",
+      "nationalIdUrl": "https://example.com/nic-verified.jpg",
+      "certificateUrl": "https://example.com/nvq-plumbing.jpg"
+    },
+    {
+      "userId": "usr-1791986799246-j2329",
+      "businessName": "Kamal Silva Services",
+      "categoryIds": [
+        "cat-plumbing"
+      ],
+      "experienceYears": 6,
+      "bio": "Professional skilled technician registered on HelpDesk Sri Lanka.",
+      "serviceAreas": [
+        "Colombo 01-15"
+      ],
+      "workingHours": "8:00 AM - 6:00 PM",
+      "baseRateLkr": 1500,
+      "calloutFeeLkr": 1500,
+      "categoryPricing": {
+        "cat-plumbing": {
+          "categoryId": "cat-plumbing",
+          "baseCalloutFeeLkr": 1500,
+          "hourlyRateLkr": 1200,
+          "travelFeePerKmLkr": 50,
+          "lastUpdatedAt": "2026-10-14T14:06:39.250Z"
+        }
+      },
+      "languagesSpoken": [
+        "Sinhala",
+        "English"
+      ],
+      "preferredContactMethod": "PHONE",
+      "verificationStatus": "PENDING_VERIFICATION",
+      "verificationNotes": "Updated verification documents re-submitted for administrative review.",
+      "isOnline": false,
+      "portfolio": [],
+      "latitude": 6.9271,
+      "longitude": 79.8612,
+      "id": "prv-1791986799250",
+      "rating": 5,
+      "reviewCount": 1,
+      "completedJobsCount": 1,
+      "verificationDate": "2026-10-14T14:06:39.359Z",
+      "nationalIdUrl": "https://example.com/nic-verified.jpg",
+      "certificateUrl": "https://example.com/nvq-plumbing.jpg"
+    },
+    {
+      "userId": "usr-1791986808589-o92o6",
+      "businessName": "Kamal Silva Services",
+      "categoryIds": [
+        "cat-plumbing"
+      ],
+      "experienceYears": 6,
+      "bio": "Professional skilled technician registered on HelpDesk Sri Lanka.",
+      "serviceAreas": [
+        "Colombo 01-15"
+      ],
+      "workingHours": "8:00 AM - 6:00 PM",
+      "baseRateLkr": 1500,
+      "calloutFeeLkr": 1500,
+      "categoryPricing": {
+        "cat-plumbing": {
+          "categoryId": "cat-plumbing",
+          "baseCalloutFeeLkr": 1500,
+          "hourlyRateLkr": 1200,
+          "travelFeePerKmLkr": 50,
+          "lastUpdatedAt": "2026-10-14T14:06:48.591Z"
+        }
+      },
+      "languagesSpoken": [
+        "Sinhala",
+        "English"
+      ],
+      "preferredContactMethod": "PHONE",
+      "verificationStatus": "PENDING_VERIFICATION",
+      "verificationNotes": "Updated verification documents re-submitted for administrative review.",
+      "isOnline": false,
+      "portfolio": [],
+      "latitude": 6.9271,
+      "longitude": 79.8612,
+      "id": "prv-1791986808591",
+      "rating": 5,
+      "reviewCount": 1,
+      "completedJobsCount": 1,
+      "verificationDate": "2026-10-14T14:06:48.711Z",
+      "nationalIdUrl": "https://example.com/nic-verified.jpg",
+      "certificateUrl": "https://example.com/nvq-plumbing.jpg"
+    },
+    {
+      "userId": "usr-1791987108509-kyfe1",
+      "businessName": "Kamal Silva Services",
+      "categoryIds": [
+        "cat-plumbing"
+      ],
+      "experienceYears": 6,
+      "bio": "Professional skilled technician registered on HelpDesk Sri Lanka.",
+      "serviceAreas": [
+        "Colombo 01-15"
+      ],
+      "workingHours": "8:00 AM - 6:00 PM",
+      "baseRateLkr": 1500,
+      "calloutFeeLkr": 1500,
+      "categoryPricing": {
+        "cat-plumbing": {
+          "categoryId": "cat-plumbing",
+          "baseCalloutFeeLkr": 1500,
+          "hourlyRateLkr": 1200,
+          "travelFeePerKmLkr": 50,
+          "lastUpdatedAt": "2026-10-14T14:11:48.511Z"
+        }
+      },
+      "languagesSpoken": [
+        "Sinhala",
+        "English"
+      ],
+      "preferredContactMethod": "PHONE",
+      "verificationStatus": "PENDING_VERIFICATION",
+      "verificationNotes": "Updated verification documents re-submitted for administrative review.",
+      "isOnline": false,
+      "portfolio": [],
+      "latitude": 6.9271,
+      "longitude": 79.8612,
+      "id": "prv-1791987108511",
+      "rating": 5,
+      "reviewCount": 1,
+      "completedJobsCount": 1,
+      "verificationDate": "2026-10-14T14:11:48.617Z",
+      "nationalIdUrl": "https://example.com/nic-verified.jpg",
+      "certificateUrl": "https://example.com/nvq-plumbing.jpg"
+    },
+    {
+      "userId": "usr-1791987719175-kibq2",
+      "businessName": "Kamal Silva Services",
+      "categoryIds": [
+        "cat-plumbing"
+      ],
+      "experienceYears": 5,
+      "bio": "Professional skilled technician registered on HelpDesk Sri Lanka.",
+      "serviceAreas": [
+        "Colombo 01-15"
+      ],
+      "workingHours": "8:00 AM - 6:00 PM",
+      "baseRateLkr": 1500,
+      "calloutFeeLkr": 1500,
+      "categoryPricing": {
+        "cat-plumbing": {
+          "categoryId": "cat-plumbing",
+          "baseCalloutFeeLkr": 1500,
+          "hourlyRateLkr": 1200,
+          "travelFeePerKmLkr": 50,
+          "lastUpdatedAt": "2026-10-14T14:21:59.178Z"
+        }
+      },
+      "languagesSpoken": [
+        "Sinhala",
+        "English"
+      ],
+      "preferredContactMethod": "PHONE",
+      "verificationStatus": "APPROVED",
+      "verificationNotes": "Credentials and government NVQ certificates verified",
+      "isOnline": false,
+      "portfolio": [],
+      "latitude": 6.9271,
+      "longitude": 79.8612,
+      "id": "prv-1791987719178",
+      "rating": 0,
+      "reviewCount": 0,
+      "completedJobsCount": 0,
+      "verificationDate": "2026-10-14T14:21:59.284Z"
+    },
+    {
+      "userId": "usr-1791987745623-c6zrl",
+      "businessName": "Kamal Silva Services",
+      "categoryIds": [
+        "cat-plumbing"
+      ],
+      "experienceYears": 6,
+      "bio": "Professional skilled technician registered on HelpDesk Sri Lanka.",
+      "serviceAreas": [
+        "Colombo 01-15"
+      ],
+      "workingHours": "8:00 AM - 6:00 PM",
+      "baseRateLkr": 1500,
+      "calloutFeeLkr": 1500,
+      "categoryPricing": {
+        "cat-plumbing": {
+          "categoryId": "cat-plumbing",
+          "baseCalloutFeeLkr": 1500,
+          "hourlyRateLkr": 1200,
+          "travelFeePerKmLkr": 50,
+          "lastUpdatedAt": "2026-10-14T14:22:25.625Z"
+        }
+      },
+      "languagesSpoken": [
+        "Sinhala",
+        "English"
+      ],
+      "preferredContactMethod": "PHONE",
+      "verificationStatus": "PENDING_VERIFICATION",
+      "verificationNotes": "Updated verification documents re-submitted for administrative review.",
+      "isOnline": false,
+      "portfolio": [],
+      "latitude": 6.9271,
+      "longitude": 79.8612,
+      "id": "prv-1791987745625",
+      "rating": 5,
+      "reviewCount": 1,
+      "completedJobsCount": 1,
+      "verificationDate": "2026-10-14T14:22:25.730Z",
+      "nationalIdUrl": "https://example.com/nic-verified.jpg",
+      "certificateUrl": "https://example.com/nvq-plumbing.jpg"
+    },
+    {
+      "userId": "usr-1791987824946-10uky",
+      "businessName": "Kamal Silva Services",
+      "categoryIds": [
+        "cat-plumbing"
+      ],
+      "experienceYears": 6,
+      "bio": "Professional skilled technician registered on HelpDesk Sri Lanka.",
+      "serviceAreas": [
+        "Colombo 01-15"
+      ],
+      "workingHours": "8:00 AM - 6:00 PM",
+      "baseRateLkr": 1500,
+      "calloutFeeLkr": 1500,
+      "categoryPricing": {
+        "cat-plumbing": {
+          "categoryId": "cat-plumbing",
+          "baseCalloutFeeLkr": 1500,
+          "hourlyRateLkr": 1200,
+          "travelFeePerKmLkr": 50,
+          "lastUpdatedAt": "2026-10-14T14:23:44.950Z"
+        }
+      },
+      "languagesSpoken": [
+        "Sinhala",
+        "English"
+      ],
+      "preferredContactMethod": "PHONE",
+      "verificationStatus": "PENDING_VERIFICATION",
+      "verificationNotes": "Updated verification documents re-submitted for administrative review.",
+      "isOnline": false,
+      "portfolio": [],
+      "latitude": 6.9271,
+      "longitude": 79.8612,
+      "id": "prv-1791987824950",
+      "rating": 5,
+      "reviewCount": 1,
+      "completedJobsCount": 1,
+      "verificationDate": "2026-10-14T14:23:45.060Z",
+      "nationalIdUrl": "https://example.com/nic-verified.jpg",
+      "certificateUrl": "https://example.com/nvq-plumbing.jpg"
     }
   ],
   "bookings": [
+    {
+      "customerId": "usr-1791987823925-k5wkn",
+      "providerId": "prv-1791987824950",
+      "categoryId": "cat-plumbing",
+      "title": "Bathroom Pipe Leak Repair",
+      "description": "Water leaking heavily from bathroom ceiling pipe",
+      "urgency": "EMERGENCY",
+      "address": "45 Galle Road, Bambalapitiya",
+      "city": "Colombo 04",
+      "district": "Colombo",
+      "latitude": 6.9271,
+      "longitude": 79.8612,
+      "preferredDate": "2026-10-15",
+      "preferredTime": "10:00 AM",
+      "attachments": [],
+      "aiClassifiedCategory": "Plumbing",
+      "aiSafetyWarning": "Place a bucket underneath the leak and avoid using corrosive chemical drain unblockers.",
+      "aiEstimatedUrgency": "NORMAL",
+      "pricingSnapshot": {
+        "baseCalloutFeeLkr": 2250,
+        "hourlyRateLkr": 1200,
+        "urgencyMultiplier": 1.5,
+        "estimatedLaborHours": 1.5,
+        "travelFeeLkr": 0,
+        "estimatedSubtotalLkr": 4050,
+        "platformFeeLkr": 405
+      },
+      "calloutFeeLkr": 2250,
+      "laborChargesLkr": 0,
+      "additionalCostsLkr": 0,
+      "totalAmountLkr": 3100,
+      "completionPhotos": [],
+      "id": "req-1791987824844",
+      "bookingReference": "HD-2026-5818",
+      "status": "COMPLETED",
+      "materialCostsLkr": 850,
+      "additionalChargeProposals": [
+        {
+          "description": "Heavy-Duty 1-inch PVC elbow joint and seal tape",
+          "amountLkr": 850,
+          "category": "MATERIALS",
+          "id": "prop-1791987825113",
+          "proposedAt": "2026-10-14T14:23:45.113Z",
+          "status": "APPROVED",
+          "customerNotes": "Approved for replacement."
+        }
+      ],
+      "travelFeeLkr": 0,
+      "platformCommissionLkr": 310,
+      "createdAt": "2026-10-14T14:23:44.844Z",
+      "updatedAt": "2026-10-14T14:23:45.141Z",
+      "acceptedAt": "2026-10-14T14:23:45.073Z",
+      "journeyStartedAt": "2026-10-14T14:23:45.085Z",
+      "arrivedAt": "2026-10-14T14:23:45.094Z",
+      "workStartedAt": "2026-10-14T14:23:45.104Z",
+      "completionSubmittedAt": "2026-10-14T14:23:45.132Z",
+      "completionNotes": "Replaced pipe elbow, pressurized and checked for zero leaks.",
+      "completionConfirmedAt": "2026-10-14T14:23:45.141Z"
+    },
+    {
+      "customerId": "usr-1791987744663-7gux7",
+      "providerId": "prv-1791987745625",
+      "categoryId": "cat-plumbing",
+      "title": "Bathroom Pipe Leak Repair",
+      "description": "Water leaking heavily from bathroom ceiling pipe",
+      "urgency": "EMERGENCY",
+      "address": "45 Galle Road, Bambalapitiya",
+      "city": "Colombo 04",
+      "district": "Colombo",
+      "latitude": 6.9271,
+      "longitude": 79.8612,
+      "preferredDate": "2026-10-15",
+      "preferredTime": "10:00 AM",
+      "attachments": [],
+      "aiClassifiedCategory": "Plumbing",
+      "aiSafetyWarning": "Place a bucket underneath the leak and avoid using corrosive chemical drain unblockers.",
+      "aiEstimatedUrgency": "NORMAL",
+      "pricingSnapshot": {
+        "baseCalloutFeeLkr": 2250,
+        "hourlyRateLkr": 1200,
+        "urgencyMultiplier": 1.5,
+        "estimatedLaborHours": 1.5,
+        "travelFeeLkr": 0,
+        "estimatedSubtotalLkr": 4050,
+        "platformFeeLkr": 405
+      },
+      "calloutFeeLkr": 2250,
+      "laborChargesLkr": 0,
+      "additionalCostsLkr": 0,
+      "totalAmountLkr": 3100,
+      "completionPhotos": [],
+      "id": "req-1791987745520",
+      "bookingReference": "HD-2026-1160",
+      "status": "COMPLETED",
+      "materialCostsLkr": 850,
+      "additionalChargeProposals": [
+        {
+          "description": "Heavy-Duty 1-inch PVC elbow joint and seal tape",
+          "amountLkr": 850,
+          "category": "MATERIALS",
+          "id": "prop-1791987745768",
+          "proposedAt": "2026-10-14T14:22:25.768Z",
+          "status": "APPROVED",
+          "customerNotes": "Approved for replacement."
+        }
+      ],
+      "travelFeeLkr": 0,
+      "platformCommissionLkr": 310,
+      "createdAt": "2026-10-14T14:22:25.520Z",
+      "updatedAt": "2026-10-14T14:22:25.797Z",
+      "acceptedAt": "2026-10-14T14:22:25.738Z",
+      "journeyStartedAt": "2026-10-14T14:22:25.746Z",
+      "arrivedAt": "2026-10-14T14:22:25.753Z",
+      "workStartedAt": "2026-10-14T14:22:25.760Z",
+      "completionSubmittedAt": "2026-10-14T14:22:25.789Z",
+      "completionNotes": "Replaced pipe elbow, pressurized and checked for zero leaks.",
+      "completionConfirmedAt": "2026-10-14T14:22:25.797Z"
+    },
+    {
+      "customerId": "usr-1791987727485-hfpfi",
+      "categoryId": "cat-plumbing",
+      "title": "Bathroom Pipe Leak Repair",
+      "description": "Water leaking heavily from bathroom ceiling pipe",
+      "urgency": "EMERGENCY",
+      "address": "45 Galle Road, Bambalapitiya",
+      "city": "Colombo 04",
+      "district": "Colombo",
+      "latitude": 6.9271,
+      "longitude": 79.8612,
+      "preferredDate": "2026-10-15",
+      "preferredTime": "10:00 AM",
+      "attachments": [],
+      "aiClassifiedCategory": "Plumbing",
+      "aiSafetyWarning": "Place a bucket underneath the leak and avoid using corrosive chemical drain unblockers.",
+      "aiEstimatedUrgency": "NORMAL",
+      "pricingSnapshot": {
+        "baseCalloutFeeLkr": 2250,
+        "hourlyRateLkr": 1200,
+        "urgencyMultiplier": 1.5,
+        "estimatedLaborHours": 1.5,
+        "travelFeeLkr": 0,
+        "estimatedSubtotalLkr": 4050,
+        "platformFeeLkr": 405
+      },
+      "calloutFeeLkr": 2250,
+      "laborChargesLkr": 0,
+      "additionalCostsLkr": 0,
+      "totalAmountLkr": 2250,
+      "completionPhotos": [],
+      "id": "req-1791987728590",
+      "bookingReference": "HD-2026-1315",
+      "status": "PENDING",
+      "materialCostsLkr": 0,
+      "additionalChargeProposals": [],
+      "travelFeeLkr": 0,
+      "platformCommissionLkr": 225,
+      "createdAt": "2026-10-14T14:22:08.590Z",
+      "updatedAt": "2026-10-14T14:22:08.590Z"
+    },
+    {
+      "customerId": "usr-1791987107308-we9us",
+      "providerId": "prv-1791987108511",
+      "categoryId": "cat-plumbing",
+      "title": "Bathroom Pipe Leak Repair",
+      "description": "Water leaking heavily from bathroom ceiling pipe",
+      "urgency": "EMERGENCY",
+      "address": "45 Galle Road, Bambalapitiya",
+      "city": "Colombo 04",
+      "district": "Colombo",
+      "latitude": 6.9271,
+      "longitude": 79.8612,
+      "preferredDate": "2026-10-15",
+      "preferredTime": "10:00 AM",
+      "attachments": [],
+      "aiClassifiedCategory": "Plumbing",
+      "aiSafetyWarning": "Place a bucket underneath the leak and avoid using corrosive chemical drain unblockers.",
+      "aiEstimatedUrgency": "NORMAL",
+      "pricingSnapshot": {
+        "baseCalloutFeeLkr": 2250,
+        "hourlyRateLkr": 1200,
+        "urgencyMultiplier": 1.5,
+        "estimatedLaborHours": 1.5,
+        "travelFeeLkr": 0,
+        "estimatedSubtotalLkr": 4050,
+        "platformFeeLkr": 405
+      },
+      "calloutFeeLkr": 2250,
+      "laborChargesLkr": 0,
+      "additionalCostsLkr": 0,
+      "totalAmountLkr": 3100,
+      "completionPhotos": [],
+      "id": "req-1791987108398",
+      "bookingReference": "HD-2026-1733",
+      "status": "COMPLETED",
+      "materialCostsLkr": 850,
+      "additionalChargeProposals": [
+        {
+          "description": "Heavy-Duty 1-inch PVC elbow joint and seal tape",
+          "amountLkr": 850,
+          "category": "MATERIALS",
+          "id": "prop-1791987108661",
+          "proposedAt": "2026-10-14T14:11:48.661Z",
+          "status": "APPROVED",
+          "customerNotes": "Approved for replacement."
+        }
+      ],
+      "travelFeeLkr": 0,
+      "platformCommissionLkr": 310,
+      "createdAt": "2026-10-14T14:11:48.398Z",
+      "updatedAt": "2026-10-14T14:11:48.690Z",
+      "acceptedAt": "2026-10-14T14:11:48.625Z",
+      "journeyStartedAt": "2026-10-14T14:11:48.639Z",
+      "arrivedAt": "2026-10-14T14:11:48.646Z",
+      "workStartedAt": "2026-10-14T14:11:48.653Z",
+      "completionSubmittedAt": "2026-10-14T14:11:48.682Z",
+      "completionNotes": "Replaced pipe elbow, pressurized and checked for zero leaks.",
+      "completionConfirmedAt": "2026-10-14T14:11:48.690Z"
+    },
+    {
+      "customerId": "usr-1791986807668-18fbz",
+      "providerId": "prv-1791986808591",
+      "categoryId": "cat-plumbing",
+      "title": "Bathroom Pipe Leak Repair",
+      "description": "Water leaking heavily from bathroom ceiling pipe",
+      "urgency": "EMERGENCY",
+      "address": "45 Galle Road, Bambalapitiya",
+      "city": "Colombo 04",
+      "district": "Colombo",
+      "latitude": 6.9271,
+      "longitude": 79.8612,
+      "preferredDate": "2026-10-15",
+      "preferredTime": "10:00 AM",
+      "attachments": [],
+      "aiClassifiedCategory": "Plumbing",
+      "aiSafetyWarning": "Place a bucket underneath the leak and avoid using corrosive chemical drain unblockers.",
+      "aiEstimatedUrgency": "NORMAL",
+      "pricingSnapshot": {
+        "baseCalloutFeeLkr": 2250,
+        "hourlyRateLkr": 1200,
+        "urgencyMultiplier": 1.5,
+        "estimatedLaborHours": 1.5,
+        "travelFeeLkr": 0,
+        "estimatedSubtotalLkr": 4050,
+        "platformFeeLkr": 405
+      },
+      "calloutFeeLkr": 2250,
+      "laborChargesLkr": 0,
+      "additionalCostsLkr": 0,
+      "totalAmountLkr": 3100,
+      "completionPhotos": [],
+      "id": "req-1791986808486",
+      "bookingReference": "HD-2026-2785",
+      "status": "COMPLETED",
+      "materialCostsLkr": 850,
+      "additionalChargeProposals": [
+        {
+          "description": "Heavy-Duty 1-inch PVC elbow joint and seal tape",
+          "amountLkr": 850,
+          "category": "MATERIALS",
+          "id": "prop-1791986808757",
+          "proposedAt": "2026-10-14T14:06:48.757Z",
+          "status": "APPROVED",
+          "customerNotes": "Approved for replacement."
+        }
+      ],
+      "travelFeeLkr": 0,
+      "platformCommissionLkr": 310,
+      "createdAt": "2026-10-14T14:06:48.486Z",
+      "updatedAt": "2026-10-14T14:06:48.781Z",
+      "acceptedAt": "2026-10-14T14:06:48.719Z",
+      "journeyStartedAt": "2026-10-14T14:06:48.727Z",
+      "arrivedAt": "2026-10-14T14:06:48.740Z",
+      "workStartedAt": "2026-10-14T14:06:48.748Z",
+      "completionSubmittedAt": "2026-10-14T14:06:48.772Z",
+      "completionNotes": "Replaced pipe elbow, pressurized and checked for zero leaks.",
+      "completionConfirmedAt": "2026-10-14T14:06:48.781Z"
+    },
+    {
+      "customerId": "usr-1791986798292-xc4rb",
+      "providerId": "prv-1791986799250",
+      "categoryId": "cat-plumbing",
+      "title": "Bathroom Pipe Leak Repair",
+      "description": "Water leaking heavily from bathroom ceiling pipe",
+      "urgency": "EMERGENCY",
+      "address": "45 Galle Road, Bambalapitiya",
+      "city": "Colombo 04",
+      "district": "Colombo",
+      "latitude": 6.9271,
+      "longitude": 79.8612,
+      "preferredDate": "2026-10-15",
+      "preferredTime": "10:00 AM",
+      "attachments": [],
+      "aiClassifiedCategory": "Plumbing",
+      "aiSafetyWarning": "Place a bucket underneath the leak and avoid using corrosive chemical drain unblockers.",
+      "aiEstimatedUrgency": "NORMAL",
+      "pricingSnapshot": {
+        "baseCalloutFeeLkr": 2250,
+        "hourlyRateLkr": 1200,
+        "urgencyMultiplier": 1.5,
+        "estimatedLaborHours": 1.5,
+        "travelFeeLkr": 0,
+        "estimatedSubtotalLkr": 4050,
+        "platformFeeLkr": 405
+      },
+      "calloutFeeLkr": 2250,
+      "laborChargesLkr": 0,
+      "additionalCostsLkr": 0,
+      "totalAmountLkr": 3100,
+      "completionPhotos": [],
+      "id": "req-1791986799142",
+      "bookingReference": "HD-2026-3054",
+      "status": "COMPLETED",
+      "materialCostsLkr": 850,
+      "additionalChargeProposals": [
+        {
+          "description": "Heavy-Duty 1-inch PVC elbow joint and seal tape",
+          "amountLkr": 850,
+          "category": "MATERIALS",
+          "id": "prop-1791986799399",
+          "proposedAt": "2026-10-14T14:06:39.399Z",
+          "status": "APPROVED",
+          "customerNotes": "Approved for replacement."
+        }
+      ],
+      "travelFeeLkr": 0,
+      "platformCommissionLkr": 310,
+      "createdAt": "2026-10-14T14:06:39.142Z",
+      "updatedAt": "2026-10-14T14:06:39.423Z",
+      "acceptedAt": "2026-10-14T14:06:39.366Z",
+      "journeyStartedAt": "2026-10-14T14:06:39.375Z",
+      "arrivedAt": "2026-10-14T14:06:39.382Z",
+      "workStartedAt": "2026-10-14T14:06:39.391Z",
+      "completionSubmittedAt": "2026-10-14T14:06:39.415Z",
+      "completionNotes": "Replaced pipe elbow, pressurized and checked for zero leaks.",
+      "completionConfirmedAt": "2026-10-14T14:06:39.423Z"
+    },
+    {
+      "customerId": "usr-1791986715715-9zfrj",
+      "providerId": "prv-1791986716711",
+      "categoryId": "cat-plumbing",
+      "title": "Bathroom Pipe Leak Repair",
+      "description": "Water leaking heavily from bathroom ceiling pipe",
+      "urgency": "EMERGENCY",
+      "address": "45 Galle Road, Bambalapitiya",
+      "city": "Colombo 04",
+      "district": "Colombo",
+      "latitude": 6.9271,
+      "longitude": 79.8612,
+      "preferredDate": "2026-10-15",
+      "preferredTime": "10:00 AM",
+      "attachments": [],
+      "aiClassifiedCategory": "Plumbing",
+      "aiSafetyWarning": "Place a bucket underneath the leak and avoid using corrosive chemical drain unblockers.",
+      "aiEstimatedUrgency": "NORMAL",
+      "pricingSnapshot": {
+        "baseCalloutFeeLkr": 2250,
+        "hourlyRateLkr": 1200,
+        "urgencyMultiplier": 1.5,
+        "estimatedLaborHours": 1.5,
+        "travelFeeLkr": 0,
+        "estimatedSubtotalLkr": 4050,
+        "platformFeeLkr": 405
+      },
+      "calloutFeeLkr": 2250,
+      "laborChargesLkr": 0,
+      "additionalCostsLkr": 0,
+      "totalAmountLkr": 3100,
+      "completionPhotos": [],
+      "id": "req-1791986716610",
+      "bookingReference": "HD-2026-3669",
+      "status": "COMPLETED",
+      "materialCostsLkr": 850,
+      "additionalChargeProposals": [
+        {
+          "description": "Heavy-Duty 1-inch PVC elbow joint and seal tape",
+          "amountLkr": 850,
+          "category": "MATERIALS",
+          "id": "prop-1791986716845",
+          "proposedAt": "2026-10-14T14:05:16.845Z",
+          "status": "APPROVED",
+          "customerNotes": "Approved for replacement."
+        }
+      ],
+      "travelFeeLkr": 0,
+      "platformCommissionLkr": 310,
+      "createdAt": "2026-10-14T14:05:16.610Z",
+      "updatedAt": "2026-10-14T14:05:16.873Z",
+      "acceptedAt": "2026-10-14T14:05:16.819Z",
+      "journeyStartedAt": "2026-10-14T14:05:16.826Z",
+      "arrivedAt": "2026-10-14T14:05:16.832Z",
+      "workStartedAt": "2026-10-14T14:05:16.838Z",
+      "completionSubmittedAt": "2026-10-14T14:05:16.863Z",
+      "completionNotes": "Replaced pipe elbow, pressurized and checked for zero leaks.",
+      "completionConfirmedAt": "2026-10-14T14:05:16.873Z"
+    },
     {
       "customerId": "usr-1791689475935-y8e7j",
       "providerId": "prv-1791689476840",
@@ -3933,9 +5124,1289 @@
       "changedByRole": "CUSTOMER",
       "note": "Customer verified and confirmed completion of all service tasks.",
       "timestamp": "2026-10-11T03:31:16.995Z"
+    },
+    {
+      "id": "bsh-1791986716610",
+      "bookingId": "req-1791986716610",
+      "fromStatus": "PENDING",
+      "toStatus": "PENDING",
+      "changedByUserId": "usr-1791986715715-9zfrj",
+      "changedByRole": "CUSTOMER",
+      "note": "Service request submitted by customer.",
+      "timestamp": "2026-10-14T14:05:16.610Z"
+    },
+    {
+      "id": "bsh-1791986716819",
+      "bookingId": "req-1791986716610",
+      "fromStatus": "PENDING",
+      "toStatus": "ACCEPTED",
+      "changedByUserId": "usr-1791986716709-ttgfo",
+      "changedByRole": "PROVIDER",
+      "note": "Accepted by professional Kamal Silva Services.",
+      "timestamp": "2026-10-14T14:05:16.819Z"
+    },
+    {
+      "id": "bsh-1791986716828",
+      "bookingId": "req-1791986716610",
+      "fromStatus": "ACCEPTED",
+      "toStatus": "ON_THE_WAY",
+      "changedByUserId": "usr-1791986716709-ttgfo",
+      "changedByRole": "PROVIDER",
+      "note": "Departing workshop. ETA 15 minutes.",
+      "timestamp": "2026-10-14T14:05:16.826Z"
+    },
+    {
+      "id": "bsh-1791986716834",
+      "bookingId": "req-1791986716610",
+      "fromStatus": "ON_THE_WAY",
+      "toStatus": "ARRIVED",
+      "changedByUserId": "usr-1791986716709-ttgfo",
+      "changedByRole": "PROVIDER",
+      "note": "Arrived at customer premises.",
+      "timestamp": "2026-10-14T14:05:16.832Z"
+    },
+    {
+      "id": "bsh-1791986716840",
+      "bookingId": "req-1791986716610",
+      "fromStatus": "ARRIVED",
+      "toStatus": "IN_PROGRESS",
+      "changedByUserId": "usr-1791986716709-ttgfo",
+      "changedByRole": "PROVIDER",
+      "note": "Commenced plumbing pipe leak inspection.",
+      "timestamp": "2026-10-14T14:05:16.838Z"
+    },
+    {
+      "id": "bsh-1791986716865",
+      "bookingId": "req-1791986716610",
+      "fromStatus": "IN_PROGRESS",
+      "toStatus": "AWAITING_CUSTOMER_CONFIRMATION",
+      "changedByUserId": "usr-1791986716709-ttgfo",
+      "changedByRole": "PROVIDER",
+      "note": "Status changed from IN_PROGRESS to AWAITING_CUSTOMER_CONFIRMATION.",
+      "timestamp": "2026-10-14T14:05:16.863Z"
+    },
+    {
+      "id": "bsh-1791986716875",
+      "bookingId": "req-1791986716610",
+      "fromStatus": "AWAITING_CUSTOMER_CONFIRMATION",
+      "toStatus": "COMPLETED",
+      "changedByUserId": "usr-1791986715715-9zfrj",
+      "changedByRole": "CUSTOMER",
+      "note": "Customer verified and confirmed completion of all service tasks.",
+      "timestamp": "2026-10-14T14:05:16.873Z"
+    },
+    {
+      "id": "bsh-1791986799142",
+      "bookingId": "req-1791986799142",
+      "fromStatus": "PENDING",
+      "toStatus": "PENDING",
+      "changedByUserId": "usr-1791986798292-xc4rb",
+      "changedByRole": "CUSTOMER",
+      "note": "Service request submitted by customer.",
+      "timestamp": "2026-10-14T14:06:39.142Z"
+    },
+    {
+      "id": "bsh-1791986799366",
+      "bookingId": "req-1791986799142",
+      "fromStatus": "PENDING",
+      "toStatus": "ACCEPTED",
+      "changedByUserId": "usr-1791986799246-j2329",
+      "changedByRole": "PROVIDER",
+      "note": "Accepted by professional Kamal Silva Services.",
+      "timestamp": "2026-10-14T14:06:39.366Z"
+    },
+    {
+      "id": "bsh-1791986799377",
+      "bookingId": "req-1791986799142",
+      "fromStatus": "ACCEPTED",
+      "toStatus": "ON_THE_WAY",
+      "changedByUserId": "usr-1791986799246-j2329",
+      "changedByRole": "PROVIDER",
+      "note": "Departing workshop. ETA 15 minutes.",
+      "timestamp": "2026-10-14T14:06:39.375Z"
+    },
+    {
+      "id": "bsh-1791986799385",
+      "bookingId": "req-1791986799142",
+      "fromStatus": "ON_THE_WAY",
+      "toStatus": "ARRIVED",
+      "changedByUserId": "usr-1791986799246-j2329",
+      "changedByRole": "PROVIDER",
+      "note": "Arrived at customer premises.",
+      "timestamp": "2026-10-14T14:06:39.382Z"
+    },
+    {
+      "id": "bsh-1791986799394",
+      "bookingId": "req-1791986799142",
+      "fromStatus": "ARRIVED",
+      "toStatus": "IN_PROGRESS",
+      "changedByUserId": "usr-1791986799246-j2329",
+      "changedByRole": "PROVIDER",
+      "note": "Commenced plumbing pipe leak inspection.",
+      "timestamp": "2026-10-14T14:06:39.391Z"
+    },
+    {
+      "id": "bsh-1791986799417",
+      "bookingId": "req-1791986799142",
+      "fromStatus": "IN_PROGRESS",
+      "toStatus": "AWAITING_CUSTOMER_CONFIRMATION",
+      "changedByUserId": "usr-1791986799246-j2329",
+      "changedByRole": "PROVIDER",
+      "note": "Status changed from IN_PROGRESS to AWAITING_CUSTOMER_CONFIRMATION.",
+      "timestamp": "2026-10-14T14:06:39.415Z"
+    },
+    {
+      "id": "bsh-1791986799425",
+      "bookingId": "req-1791986799142",
+      "fromStatus": "AWAITING_CUSTOMER_CONFIRMATION",
+      "toStatus": "COMPLETED",
+      "changedByUserId": "usr-1791986798292-xc4rb",
+      "changedByRole": "CUSTOMER",
+      "note": "Customer verified and confirmed completion of all service tasks.",
+      "timestamp": "2026-10-14T14:06:39.423Z"
+    },
+    {
+      "id": "bsh-1791986808486",
+      "bookingId": "req-1791986808486",
+      "fromStatus": "PENDING",
+      "toStatus": "PENDING",
+      "changedByUserId": "usr-1791986807668-18fbz",
+      "changedByRole": "CUSTOMER",
+      "note": "Service request submitted by customer.",
+      "timestamp": "2026-10-14T14:06:48.486Z"
+    },
+    {
+      "id": "bsh-1791986808719",
+      "bookingId": "req-1791986808486",
+      "fromStatus": "PENDING",
+      "toStatus": "ACCEPTED",
+      "changedByUserId": "usr-1791986808589-o92o6",
+      "changedByRole": "PROVIDER",
+      "note": "Accepted by professional Kamal Silva Services.",
+      "timestamp": "2026-10-14T14:06:48.719Z"
+    },
+    {
+      "id": "bsh-1791986808731",
+      "bookingId": "req-1791986808486",
+      "fromStatus": "ACCEPTED",
+      "toStatus": "ON_THE_WAY",
+      "changedByUserId": "usr-1791986808589-o92o6",
+      "changedByRole": "PROVIDER",
+      "note": "Departing workshop. ETA 15 minutes.",
+      "timestamp": "2026-10-14T14:06:48.727Z"
+    },
+    {
+      "id": "bsh-1791986808743",
+      "bookingId": "req-1791986808486",
+      "fromStatus": "ON_THE_WAY",
+      "toStatus": "ARRIVED",
+      "changedByUserId": "usr-1791986808589-o92o6",
+      "changedByRole": "PROVIDER",
+      "note": "Arrived at customer premises.",
+      "timestamp": "2026-10-14T14:06:48.740Z"
+    },
+    {
+      "id": "bsh-1791986808751",
+      "bookingId": "req-1791986808486",
+      "fromStatus": "ARRIVED",
+      "toStatus": "IN_PROGRESS",
+      "changedByUserId": "usr-1791986808589-o92o6",
+      "changedByRole": "PROVIDER",
+      "note": "Commenced plumbing pipe leak inspection.",
+      "timestamp": "2026-10-14T14:06:48.748Z"
+    },
+    {
+      "id": "bsh-1791986808775",
+      "bookingId": "req-1791986808486",
+      "fromStatus": "IN_PROGRESS",
+      "toStatus": "AWAITING_CUSTOMER_CONFIRMATION",
+      "changedByUserId": "usr-1791986808589-o92o6",
+      "changedByRole": "PROVIDER",
+      "note": "Status changed from IN_PROGRESS to AWAITING_CUSTOMER_CONFIRMATION.",
+      "timestamp": "2026-10-14T14:06:48.772Z"
+    },
+    {
+      "id": "bsh-1791986808784",
+      "bookingId": "req-1791986808486",
+      "fromStatus": "AWAITING_CUSTOMER_CONFIRMATION",
+      "toStatus": "COMPLETED",
+      "changedByUserId": "usr-1791986807668-18fbz",
+      "changedByRole": "CUSTOMER",
+      "note": "Customer verified and confirmed completion of all service tasks.",
+      "timestamp": "2026-10-14T14:06:48.781Z"
+    },
+    {
+      "id": "bsh-1791987108398",
+      "bookingId": "req-1791987108398",
+      "fromStatus": "PENDING",
+      "toStatus": "PENDING",
+      "changedByUserId": "usr-1791987107308-we9us",
+      "changedByRole": "CUSTOMER",
+      "note": "Service request submitted by customer.",
+      "timestamp": "2026-10-14T14:11:48.398Z"
+    },
+    {
+      "id": "bsh-1791987108625",
+      "bookingId": "req-1791987108398",
+      "fromStatus": "PENDING",
+      "toStatus": "ACCEPTED",
+      "changedByUserId": "usr-1791987108509-kyfe1",
+      "changedByRole": "PROVIDER",
+      "note": "Accepted by professional Kamal Silva Services.",
+      "timestamp": "2026-10-14T14:11:48.625Z"
+    },
+    {
+      "id": "bsh-1791987108641",
+      "bookingId": "req-1791987108398",
+      "fromStatus": "ACCEPTED",
+      "toStatus": "ON_THE_WAY",
+      "changedByUserId": "usr-1791987108509-kyfe1",
+      "changedByRole": "PROVIDER",
+      "note": "Departing workshop. ETA 15 minutes.",
+      "timestamp": "2026-10-14T14:11:48.639Z"
+    },
+    {
+      "id": "bsh-1791987108649",
+      "bookingId": "req-1791987108398",
+      "fromStatus": "ON_THE_WAY",
+      "toStatus": "ARRIVED",
+      "changedByUserId": "usr-1791987108509-kyfe1",
+      "changedByRole": "PROVIDER",
+      "note": "Arrived at customer premises.",
+      "timestamp": "2026-10-14T14:11:48.646Z"
+    },
+    {
+      "id": "bsh-1791987108656",
+      "bookingId": "req-1791987108398",
+      "fromStatus": "ARRIVED",
+      "toStatus": "IN_PROGRESS",
+      "changedByUserId": "usr-1791987108509-kyfe1",
+      "changedByRole": "PROVIDER",
+      "note": "Commenced plumbing pipe leak inspection.",
+      "timestamp": "2026-10-14T14:11:48.653Z"
+    },
+    {
+      "id": "bsh-1791987108684",
+      "bookingId": "req-1791987108398",
+      "fromStatus": "IN_PROGRESS",
+      "toStatus": "AWAITING_CUSTOMER_CONFIRMATION",
+      "changedByUserId": "usr-1791987108509-kyfe1",
+      "changedByRole": "PROVIDER",
+      "note": "Status changed from IN_PROGRESS to AWAITING_CUSTOMER_CONFIRMATION.",
+      "timestamp": "2026-10-14T14:11:48.682Z"
+    },
+    {
+      "id": "bsh-1791987108693",
+      "bookingId": "req-1791987108398",
+      "fromStatus": "AWAITING_CUSTOMER_CONFIRMATION",
+      "toStatus": "COMPLETED",
+      "changedByUserId": "usr-1791987107308-we9us",
+      "changedByRole": "CUSTOMER",
+      "note": "Customer verified and confirmed completion of all service tasks.",
+      "timestamp": "2026-10-14T14:11:48.690Z"
+    },
+    {
+      "id": "bsh-1791987728590",
+      "bookingId": "req-1791987728590",
+      "fromStatus": "PENDING",
+      "toStatus": "PENDING",
+      "changedByUserId": "usr-1791987727485-hfpfi",
+      "changedByRole": "CUSTOMER",
+      "note": "Service request submitted by customer.",
+      "timestamp": "2026-10-14T14:22:08.590Z"
+    },
+    {
+      "id": "bsh-1791987745520",
+      "bookingId": "req-1791987745520",
+      "fromStatus": "PENDING",
+      "toStatus": "PENDING",
+      "changedByUserId": "usr-1791987744663-7gux7",
+      "changedByRole": "CUSTOMER",
+      "note": "Service request submitted by customer.",
+      "timestamp": "2026-10-14T14:22:25.520Z"
+    },
+    {
+      "id": "bsh-1791987745738",
+      "bookingId": "req-1791987745520",
+      "fromStatus": "PENDING",
+      "toStatus": "ACCEPTED",
+      "changedByUserId": "usr-1791987745623-c6zrl",
+      "changedByRole": "PROVIDER",
+      "note": "Accepted by professional Kamal Silva Services.",
+      "timestamp": "2026-10-14T14:22:25.738Z"
+    },
+    {
+      "id": "bsh-1791987745748",
+      "bookingId": "req-1791987745520",
+      "fromStatus": "ACCEPTED",
+      "toStatus": "ON_THE_WAY",
+      "changedByUserId": "usr-1791987745623-c6zrl",
+      "changedByRole": "PROVIDER",
+      "note": "Departing workshop. ETA 15 minutes.",
+      "timestamp": "2026-10-14T14:22:25.746Z"
+    },
+    {
+      "id": "bsh-1791987745756",
+      "bookingId": "req-1791987745520",
+      "fromStatus": "ON_THE_WAY",
+      "toStatus": "ARRIVED",
+      "changedByUserId": "usr-1791987745623-c6zrl",
+      "changedByRole": "PROVIDER",
+      "note": "Arrived at customer premises.",
+      "timestamp": "2026-10-14T14:22:25.753Z"
+    },
+    {
+      "id": "bsh-1791987745763",
+      "bookingId": "req-1791987745520",
+      "fromStatus": "ARRIVED",
+      "toStatus": "IN_PROGRESS",
+      "changedByUserId": "usr-1791987745623-c6zrl",
+      "changedByRole": "PROVIDER",
+      "note": "Commenced plumbing pipe leak inspection.",
+      "timestamp": "2026-10-14T14:22:25.760Z"
+    },
+    {
+      "id": "bsh-1791987745791",
+      "bookingId": "req-1791987745520",
+      "fromStatus": "IN_PROGRESS",
+      "toStatus": "AWAITING_CUSTOMER_CONFIRMATION",
+      "changedByUserId": "usr-1791987745623-c6zrl",
+      "changedByRole": "PROVIDER",
+      "note": "Status changed from IN_PROGRESS to AWAITING_CUSTOMER_CONFIRMATION.",
+      "timestamp": "2026-10-14T14:22:25.789Z"
+    },
+    {
+      "id": "bsh-1791987745799",
+      "bookingId": "req-1791987745520",
+      "fromStatus": "AWAITING_CUSTOMER_CONFIRMATION",
+      "toStatus": "COMPLETED",
+      "changedByUserId": "usr-1791987744663-7gux7",
+      "changedByRole": "CUSTOMER",
+      "note": "Customer verified and confirmed completion of all service tasks.",
+      "timestamp": "2026-10-14T14:22:25.797Z"
+    },
+    {
+      "id": "bsh-1791987824844",
+      "bookingId": "req-1791987824844",
+      "fromStatus": "PENDING",
+      "toStatus": "PENDING",
+      "changedByUserId": "usr-1791987823925-k5wkn",
+      "changedByRole": "CUSTOMER",
+      "note": "Service request submitted by customer.",
+      "timestamp": "2026-10-14T14:23:44.844Z"
+    },
+    {
+      "id": "bsh-1791987825073",
+      "bookingId": "req-1791987824844",
+      "fromStatus": "PENDING",
+      "toStatus": "ACCEPTED",
+      "changedByUserId": "usr-1791987824946-10uky",
+      "changedByRole": "PROVIDER",
+      "note": "Accepted by professional Kamal Silva Services.",
+      "timestamp": "2026-10-14T14:23:45.073Z"
+    },
+    {
+      "id": "bsh-1791987825088",
+      "bookingId": "req-1791987824844",
+      "fromStatus": "ACCEPTED",
+      "toStatus": "ON_THE_WAY",
+      "changedByUserId": "usr-1791987824946-10uky",
+      "changedByRole": "PROVIDER",
+      "note": "Departing workshop. ETA 15 minutes.",
+      "timestamp": "2026-10-14T14:23:45.085Z"
+    },
+    {
+      "id": "bsh-1791987825098",
+      "bookingId": "req-1791987824844",
+      "fromStatus": "ON_THE_WAY",
+      "toStatus": "ARRIVED",
+      "changedByUserId": "usr-1791987824946-10uky",
+      "changedByRole": "PROVIDER",
+      "note": "Arrived at customer premises.",
+      "timestamp": "2026-10-14T14:23:45.094Z"
+    },
+    {
+      "id": "bsh-1791987825107",
+      "bookingId": "req-1791987824844",
+      "fromStatus": "ARRIVED",
+      "toStatus": "IN_PROGRESS",
+      "changedByUserId": "usr-1791987824946-10uky",
+      "changedByRole": "PROVIDER",
+      "note": "Commenced plumbing pipe leak inspection.",
+      "timestamp": "2026-10-14T14:23:45.104Z"
+    },
+    {
+      "id": "bsh-1791987825135",
+      "bookingId": "req-1791987824844",
+      "fromStatus": "IN_PROGRESS",
+      "toStatus": "AWAITING_CUSTOMER_CONFIRMATION",
+      "changedByUserId": "usr-1791987824946-10uky",
+      "changedByRole": "PROVIDER",
+      "note": "Status changed from IN_PROGRESS to AWAITING_CUSTOMER_CONFIRMATION.",
+      "timestamp": "2026-10-14T14:23:45.132Z"
+    },
+    {
+      "id": "bsh-1791987825144",
+      "bookingId": "req-1791987824844",
+      "fromStatus": "AWAITING_CUSTOMER_CONFIRMATION",
+      "toStatus": "COMPLETED",
+      "changedByUserId": "usr-1791987823925-k5wkn",
+      "changedByRole": "CUSTOMER",
+      "note": "Customer verified and confirmed completion of all service tasks.",
+      "timestamp": "2026-10-14T14:23:45.141Z"
     }
   ],
   "notifications": [
+    {
+      "userId": "usr-admin-1",
+      "title": "Provider Document Resubmission",
+      "message": "Kamal Silva re-submitted verification documents for review.",
+      "type": "VERIFICATION",
+      "id": "notif-1791987825184-mzjd",
+      "isRead": false,
+      "createdAt": "2026-10-14T14:23:45.184Z"
+    },
+    {
+      "userId": "usr-admin-1",
+      "title": "New Complaint Filed",
+      "message": "Complaint #cmp-1791987825158 filed on booking for: \"Inquiry regarding final invoice breakdown\"",
+      "type": "SYSTEM",
+      "bookingId": "req-1791987824844",
+      "id": "notif-1791987825158-nwle",
+      "isRead": false,
+      "createdAt": "2026-10-14T14:23:45.158Z"
+    },
+    {
+      "userId": "usr-1791987824946-10uky",
+      "title": "New Review Received! ⭐",
+      "message": "Customer left a 5-star review for booking HD-2026-5818: \"Excellent, prompt, and solved the leak immediately...\"",
+      "type": "REVIEW",
+      "bookingId": "req-1791987824844",
+      "id": "notif-1791987825149-p2dp",
+      "isRead": false,
+      "createdAt": "2026-10-14T14:23:45.149Z"
+    },
+    {
+      "userId": "usr-1791987824946-10uky",
+      "title": "Job Confirmed & Completed!",
+      "message": "Customer confirmed completion for booking HD-2026-5818. Net earnings recorded: Rs. 2,790.",
+      "type": "BOOKING_UPDATE",
+      "bookingId": "req-1791987824844",
+      "id": "notif-1791987825141-k3sh",
+      "isRead": false,
+      "createdAt": "2026-10-14T14:23:45.141Z"
+    },
+    {
+      "userId": "usr-1791987823925-k5wkn",
+      "title": "Service Completed — Please Confirm",
+      "message": "Your professional has marked booking HD-2026-5818 complete. Total: Rs. 3,100. Please review and confirm.",
+      "type": "BOOKING_UPDATE",
+      "bookingId": "req-1791987824844",
+      "id": "notif-1791987825132-fx6q",
+      "isRead": false,
+      "createdAt": "2026-10-14T14:23:45.132Z"
+    },
+    {
+      "userId": "usr-1791987824946-10uky",
+      "title": "Additional Charge Approved! ✓",
+      "message": "Customer approved your proposal for \"Heavy-Duty 1-inch PVC elbow joint and seal tape\" (Rs. 850).",
+      "type": "BOOKING_UPDATE",
+      "bookingId": "req-1791987824844",
+      "id": "notif-1791987825123-q9vm",
+      "isRead": false,
+      "createdAt": "2026-10-14T14:23:45.123Z"
+    },
+    {
+      "userId": "usr-1791987823925-k5wkn",
+      "title": "Additional Charge Proposal Received",
+      "message": "Technician proposed additional charge for MATERIALS: \"Heavy-Duty 1-inch PVC elbow joint and seal tape\" (Rs. 850). Requires your review.",
+      "type": "BOOKING_UPDATE",
+      "bookingId": "req-1791987824844",
+      "id": "notif-1791987825113-05dt",
+      "isRead": false,
+      "createdAt": "2026-10-14T14:23:45.113Z"
+    },
+    {
+      "userId": "usr-1791987823925-k5wkn",
+      "title": "Work Started",
+      "message": "Work has officially started for booking HD-2026-5818.",
+      "type": "BOOKING_UPDATE",
+      "bookingId": "req-1791987824844",
+      "id": "notif-1791987825104-ebfm",
+      "isRead": false,
+      "createdAt": "2026-10-14T14:23:45.104Z"
+    },
+    {
+      "userId": "usr-1791987823925-k5wkn",
+      "title": "Professional Arrived at Location",
+      "message": "Your professional has arrived at your address for booking HD-2026-5818.",
+      "type": "BOOKING_UPDATE",
+      "bookingId": "req-1791987824844",
+      "id": "notif-1791987825094-ccob",
+      "isRead": false,
+      "createdAt": "2026-10-14T14:23:45.094Z"
+    },
+    {
+      "userId": "usr-1791987823925-k5wkn",
+      "title": "Professional On The Way",
+      "message": "Your professional is travelling to your location for booking HD-2026-5818.",
+      "type": "BOOKING_UPDATE",
+      "bookingId": "req-1791987824844",
+      "id": "notif-1791987825085-85qj",
+      "isRead": false,
+      "createdAt": "2026-10-14T14:23:45.085Z"
+    },
+    {
+      "userId": "usr-1791987823925-k5wkn",
+      "title": "Professional Accepted Your Request",
+      "message": "Kamal Silva has accepted your request HD-2026-5818.",
+      "type": "BOOKING_UPDATE",
+      "bookingId": "req-1791987824844",
+      "id": "notif-1791987825073-bjja",
+      "isRead": false,
+      "createdAt": "2026-10-14T14:23:45.073Z"
+    },
+    {
+      "userId": "usr-1791987824946-10uky",
+      "title": "Account Verification: APPROVED",
+      "message": "Congratulations! Your HelpDesk service provider profile has been approved. You can now go online to receive service requests.",
+      "type": "VERIFICATION",
+      "id": "notif-1791987825064-l99y",
+      "isRead": false,
+      "createdAt": "2026-10-14T14:23:45.064Z"
+    },
+    {
+      "userId": "usr-admin-1",
+      "title": "New Provider Registration",
+      "message": "Kamal Silva registered as a service provider and submitted details for verification.",
+      "type": "VERIFICATION",
+      "id": "notif-1791987824954-55dh",
+      "isRead": false,
+      "createdAt": "2026-10-14T14:23:44.954Z"
+    },
+    {
+      "userId": "usr-1791987823925-k5wkn",
+      "title": "Service Request Submitted",
+      "message": "Your EMERGENCY request HD-2026-5818 has been placed. Nearby verified professionals are being notified.",
+      "type": "BOOKING_UPDATE",
+      "bookingId": "req-1791987824844",
+      "id": "notif-1791987824844-yxc8",
+      "isRead": false,
+      "createdAt": "2026-10-14T14:23:44.844Z"
+    },
+    {
+      "userId": "usr-admin-1",
+      "title": "Provider Document Resubmission",
+      "message": "Kamal Silva re-submitted verification documents for review.",
+      "type": "VERIFICATION",
+      "id": "notif-1791987745842-j8hl",
+      "isRead": false,
+      "createdAt": "2026-10-14T14:22:25.842Z"
+    },
+    {
+      "userId": "usr-admin-1",
+      "title": "New Complaint Filed",
+      "message": "Complaint #cmp-1791987745812 filed on booking for: \"Inquiry regarding final invoice breakdown\"",
+      "type": "SYSTEM",
+      "bookingId": "req-1791987745520",
+      "id": "notif-1791987745812-ujkm",
+      "isRead": false,
+      "createdAt": "2026-10-14T14:22:25.812Z"
+    },
+    {
+      "userId": "usr-1791987745623-c6zrl",
+      "title": "New Review Received! ⭐",
+      "message": "Customer left a 5-star review for booking HD-2026-1160: \"Excellent, prompt, and solved the leak immediately...\"",
+      "type": "REVIEW",
+      "bookingId": "req-1791987745520",
+      "id": "notif-1791987745805-xf74",
+      "isRead": false,
+      "createdAt": "2026-10-14T14:22:25.805Z"
+    },
+    {
+      "userId": "usr-1791987745623-c6zrl",
+      "title": "Job Confirmed & Completed!",
+      "message": "Customer confirmed completion for booking HD-2026-1160. Net earnings recorded: Rs. 2,790.",
+      "type": "BOOKING_UPDATE",
+      "bookingId": "req-1791987745520",
+      "id": "notif-1791987745797-qtqy",
+      "isRead": false,
+      "createdAt": "2026-10-14T14:22:25.797Z"
+    },
+    {
+      "userId": "usr-1791987744663-7gux7",
+      "title": "Service Completed — Please Confirm",
+      "message": "Your professional has marked booking HD-2026-1160 complete. Total: Rs. 3,100. Please review and confirm.",
+      "type": "BOOKING_UPDATE",
+      "bookingId": "req-1791987745520",
+      "id": "notif-1791987745789-34gh",
+      "isRead": false,
+      "createdAt": "2026-10-14T14:22:25.789Z"
+    },
+    {
+      "userId": "usr-1791987745623-c6zrl",
+      "title": "Additional Charge Approved! ✓",
+      "message": "Customer approved your proposal for \"Heavy-Duty 1-inch PVC elbow joint and seal tape\" (Rs. 850).",
+      "type": "BOOKING_UPDATE",
+      "bookingId": "req-1791987745520",
+      "id": "notif-1791987745781-71of",
+      "isRead": false,
+      "createdAt": "2026-10-14T14:22:25.781Z"
+    },
+    {
+      "userId": "usr-1791987744663-7gux7",
+      "title": "Additional Charge Proposal Received",
+      "message": "Technician proposed additional charge for MATERIALS: \"Heavy-Duty 1-inch PVC elbow joint and seal tape\" (Rs. 850). Requires your review.",
+      "type": "BOOKING_UPDATE",
+      "bookingId": "req-1791987745520",
+      "id": "notif-1791987745773-ccai",
+      "isRead": false,
+      "createdAt": "2026-10-14T14:22:25.773Z"
+    },
+    {
+      "userId": "usr-1791987744663-7gux7",
+      "title": "Work Started",
+      "message": "Work has officially started for booking HD-2026-1160.",
+      "type": "BOOKING_UPDATE",
+      "bookingId": "req-1791987745520",
+      "id": "notif-1791987745760-lcsx",
+      "isRead": false,
+      "createdAt": "2026-10-14T14:22:25.760Z"
+    },
+    {
+      "userId": "usr-1791987744663-7gux7",
+      "title": "Professional Arrived at Location",
+      "message": "Your professional has arrived at your address for booking HD-2026-1160.",
+      "type": "BOOKING_UPDATE",
+      "bookingId": "req-1791987745520",
+      "id": "notif-1791987745753-6thf",
+      "isRead": false,
+      "createdAt": "2026-10-14T14:22:25.753Z"
+    },
+    {
+      "userId": "usr-1791987744663-7gux7",
+      "title": "Professional On The Way",
+      "message": "Your professional is travelling to your location for booking HD-2026-1160.",
+      "type": "BOOKING_UPDATE",
+      "bookingId": "req-1791987745520",
+      "id": "notif-1791987745746-anoo",
+      "isRead": false,
+      "createdAt": "2026-10-14T14:22:25.746Z"
+    },
+    {
+      "userId": "usr-1791987744663-7gux7",
+      "title": "Professional Accepted Your Request",
+      "message": "Kamal Silva has accepted your request HD-2026-1160.",
+      "type": "BOOKING_UPDATE",
+      "bookingId": "req-1791987745520",
+      "id": "notif-1791987745738-3p0y",
+      "isRead": false,
+      "createdAt": "2026-10-14T14:22:25.738Z"
+    },
+    {
+      "userId": "usr-1791987745623-c6zrl",
+      "title": "Account Verification: APPROVED",
+      "message": "Congratulations! Your HelpDesk service provider profile has been approved. You can now go online to receive service requests.",
+      "type": "VERIFICATION",
+      "id": "notif-1791987745733-gh8t",
+      "isRead": false,
+      "createdAt": "2026-10-14T14:22:25.733Z"
+    },
+    {
+      "userId": "usr-admin-1",
+      "title": "New Provider Registration",
+      "message": "Kamal Silva registered as a service provider and submitted details for verification.",
+      "type": "VERIFICATION",
+      "id": "notif-1791987745628-xt1n",
+      "isRead": false,
+      "createdAt": "2026-10-14T14:22:25.628Z"
+    },
+    {
+      "userId": "usr-1791987744663-7gux7",
+      "title": "Service Request Submitted",
+      "message": "Your EMERGENCY request HD-2026-1160 has been placed. Nearby verified professionals are being notified.",
+      "type": "BOOKING_UPDATE",
+      "bookingId": "req-1791987745520",
+      "id": "notif-1791987745520-65se",
+      "isRead": false,
+      "createdAt": "2026-10-14T14:22:25.520Z"
+    },
+    {
+      "userId": "usr-1791987727485-hfpfi",
+      "title": "Service Request Submitted",
+      "message": "Your EMERGENCY request HD-2026-1315 has been placed. Nearby verified professionals are being notified.",
+      "type": "BOOKING_UPDATE",
+      "bookingId": "req-1791987728590",
+      "id": "notif-1791987728591-57sl",
+      "isRead": false,
+      "createdAt": "2026-10-14T14:22:08.591Z"
+    },
+    {
+      "userId": "usr-1791987719175-kibq2",
+      "title": "Account Verification: APPROVED",
+      "message": "Congratulations! Your HelpDesk service provider profile has been approved. You can now go online to receive service requests.",
+      "type": "VERIFICATION",
+      "id": "notif-1791987719287-2khe",
+      "isRead": false,
+      "createdAt": "2026-10-14T14:21:59.287Z"
+    },
+    {
+      "userId": "usr-admin-1",
+      "title": "New Provider Registration",
+      "message": "Kamal Silva registered as a service provider and submitted details for verification.",
+      "type": "VERIFICATION",
+      "id": "notif-1791987719181-5lrl",
+      "isRead": false,
+      "createdAt": "2026-10-14T14:21:59.181Z"
+    },
+    {
+      "userId": "usr-admin-1",
+      "title": "Provider Document Resubmission",
+      "message": "Kamal Silva re-submitted verification documents for review.",
+      "type": "VERIFICATION",
+      "id": "notif-1791987108734-i06n",
+      "isRead": false,
+      "createdAt": "2026-10-14T14:11:48.734Z"
+    },
+    {
+      "userId": "usr-admin-1",
+      "title": "New Complaint Filed",
+      "message": "Complaint #cmp-1791987108707 filed on booking for: \"Inquiry regarding final invoice breakdown\"",
+      "type": "SYSTEM",
+      "bookingId": "req-1791987108398",
+      "id": "notif-1791987108707-wunz",
+      "isRead": false,
+      "createdAt": "2026-10-14T14:11:48.707Z"
+    },
+    {
+      "userId": "usr-1791987108509-kyfe1",
+      "title": "New Review Received! ⭐",
+      "message": "Customer left a 5-star review for booking HD-2026-1733: \"Excellent, prompt, and solved the leak immediately...\"",
+      "type": "REVIEW",
+      "bookingId": "req-1791987108398",
+      "id": "notif-1791987108700-nwhj",
+      "isRead": false,
+      "createdAt": "2026-10-14T14:11:48.700Z"
+    },
+    {
+      "userId": "usr-1791987108509-kyfe1",
+      "title": "Job Confirmed & Completed!",
+      "message": "Customer confirmed completion for booking HD-2026-1733. Net earnings recorded: Rs. 2,790.",
+      "type": "BOOKING_UPDATE",
+      "bookingId": "req-1791987108398",
+      "id": "notif-1791987108690-j986",
+      "isRead": false,
+      "createdAt": "2026-10-14T14:11:48.690Z"
+    },
+    {
+      "userId": "usr-1791987107308-we9us",
+      "title": "Service Completed — Please Confirm",
+      "message": "Your professional has marked booking HD-2026-1733 complete. Total: Rs. 3,100. Please review and confirm.",
+      "type": "BOOKING_UPDATE",
+      "bookingId": "req-1791987108398",
+      "id": "notif-1791987108682-uue6",
+      "isRead": false,
+      "createdAt": "2026-10-14T14:11:48.682Z"
+    },
+    {
+      "userId": "usr-1791987108509-kyfe1",
+      "title": "Additional Charge Approved! ✓",
+      "message": "Customer approved your proposal for \"Heavy-Duty 1-inch PVC elbow joint and seal tape\" (Rs. 850).",
+      "type": "BOOKING_UPDATE",
+      "bookingId": "req-1791987108398",
+      "id": "notif-1791987108674-9k09",
+      "isRead": false,
+      "createdAt": "2026-10-14T14:11:48.674Z"
+    },
+    {
+      "userId": "usr-1791987107308-we9us",
+      "title": "Additional Charge Proposal Received",
+      "message": "Technician proposed additional charge for MATERIALS: \"Heavy-Duty 1-inch PVC elbow joint and seal tape\" (Rs. 850). Requires your review.",
+      "type": "BOOKING_UPDATE",
+      "bookingId": "req-1791987108398",
+      "id": "notif-1791987108666-p6tl",
+      "isRead": false,
+      "createdAt": "2026-10-14T14:11:48.666Z"
+    },
+    {
+      "userId": "usr-1791987107308-we9us",
+      "title": "Work Started",
+      "message": "Work has officially started for booking HD-2026-1733.",
+      "type": "BOOKING_UPDATE",
+      "bookingId": "req-1791987108398",
+      "id": "notif-1791987108653-9wg6",
+      "isRead": false,
+      "createdAt": "2026-10-14T14:11:48.653Z"
+    },
+    {
+      "userId": "usr-1791987107308-we9us",
+      "title": "Professional Arrived at Location",
+      "message": "Your professional has arrived at your address for booking HD-2026-1733.",
+      "type": "BOOKING_UPDATE",
+      "bookingId": "req-1791987108398",
+      "id": "notif-1791987108646-30d2",
+      "isRead": false,
+      "createdAt": "2026-10-14T14:11:48.646Z"
+    },
+    {
+      "userId": "usr-1791987107308-we9us",
+      "title": "Professional On The Way",
+      "message": "Your professional is travelling to your location for booking HD-2026-1733.",
+      "type": "BOOKING_UPDATE",
+      "bookingId": "req-1791987108398",
+      "id": "notif-1791987108639-ktga",
+      "isRead": false,
+      "createdAt": "2026-10-14T14:11:48.639Z"
+    },
+    {
+      "userId": "usr-1791987107308-we9us",
+      "title": "Professional Accepted Your Request",
+      "message": "Kamal Silva has accepted your request HD-2026-1733.",
+      "type": "BOOKING_UPDATE",
+      "bookingId": "req-1791987108398",
+      "id": "notif-1791987108625-194h",
+      "isRead": false,
+      "createdAt": "2026-10-14T14:11:48.625Z"
+    },
+    {
+      "userId": "usr-1791987108509-kyfe1",
+      "title": "Account Verification: APPROVED",
+      "message": "Congratulations! Your HelpDesk service provider profile has been approved. You can now go online to receive service requests.",
+      "type": "VERIFICATION",
+      "id": "notif-1791987108620-qgp1",
+      "isRead": false,
+      "createdAt": "2026-10-14T14:11:48.620Z"
+    },
+    {
+      "userId": "usr-admin-1",
+      "title": "New Provider Registration",
+      "message": "Kamal Silva registered as a service provider and submitted details for verification.",
+      "type": "VERIFICATION",
+      "id": "notif-1791987108514-liwc",
+      "isRead": false,
+      "createdAt": "2026-10-14T14:11:48.514Z"
+    },
+    {
+      "userId": "usr-1791987107308-we9us",
+      "title": "Service Request Submitted",
+      "message": "Your EMERGENCY request HD-2026-1733 has been placed. Nearby verified professionals are being notified.",
+      "type": "BOOKING_UPDATE",
+      "bookingId": "req-1791987108398",
+      "id": "notif-1791987108398-tnl0",
+      "isRead": false,
+      "createdAt": "2026-10-14T14:11:48.398Z"
+    },
+    {
+      "userId": "usr-admin-1",
+      "title": "Provider Document Resubmission",
+      "message": "Kamal Silva re-submitted verification documents for review.",
+      "type": "VERIFICATION",
+      "id": "notif-1791986808821-ydx5",
+      "isRead": false,
+      "createdAt": "2026-10-14T14:06:48.821Z"
+    },
+    {
+      "userId": "usr-admin-1",
+      "title": "New Complaint Filed",
+      "message": "Complaint #cmp-1791986808798 filed on booking for: \"Inquiry regarding final invoice breakdown\"",
+      "type": "SYSTEM",
+      "bookingId": "req-1791986808486",
+      "id": "notif-1791986808798-xrhs",
+      "isRead": false,
+      "createdAt": "2026-10-14T14:06:48.798Z"
+    },
+    {
+      "userId": "usr-1791986808589-o92o6",
+      "title": "New Review Received! ⭐",
+      "message": "Customer left a 5-star review for booking HD-2026-2785: \"Excellent, prompt, and solved the leak immediately...\"",
+      "type": "REVIEW",
+      "bookingId": "req-1791986808486",
+      "id": "notif-1791986808789-mgp2",
+      "isRead": false,
+      "createdAt": "2026-10-14T14:06:48.789Z"
+    },
+    {
+      "userId": "usr-1791986808589-o92o6",
+      "title": "Job Confirmed & Completed!",
+      "message": "Customer confirmed completion for booking HD-2026-2785. Net earnings recorded: Rs. 2,790.",
+      "type": "BOOKING_UPDATE",
+      "bookingId": "req-1791986808486",
+      "id": "notif-1791986808781-vhqx",
+      "isRead": false,
+      "createdAt": "2026-10-14T14:06:48.781Z"
+    },
+    {
+      "userId": "usr-1791986807668-18fbz",
+      "title": "Service Completed — Please Confirm",
+      "message": "Your professional has marked booking HD-2026-2785 complete. Total: Rs. 3,100. Please review and confirm.",
+      "type": "BOOKING_UPDATE",
+      "bookingId": "req-1791986808486",
+      "id": "notif-1791986808772-j1hd",
+      "isRead": false,
+      "createdAt": "2026-10-14T14:06:48.772Z"
+    },
+    {
+      "userId": "usr-1791986808589-o92o6",
+      "title": "Additional Charge Approved! ✓",
+      "message": "Customer approved your proposal for \"Heavy-Duty 1-inch PVC elbow joint and seal tape\" (Rs. 850).",
+      "type": "BOOKING_UPDATE",
+      "bookingId": "req-1791986808486",
+      "id": "notif-1791986808764-x6ky",
+      "isRead": false,
+      "createdAt": "2026-10-14T14:06:48.764Z"
+    },
+    {
+      "userId": "usr-1791986807668-18fbz",
+      "title": "Additional Charge Proposal Received",
+      "message": "Technician proposed additional charge for MATERIALS: \"Heavy-Duty 1-inch PVC elbow joint and seal tape\" (Rs. 850). Requires your review.",
+      "type": "BOOKING_UPDATE",
+      "bookingId": "req-1791986808486",
+      "id": "notif-1791986808757-3xrr",
+      "isRead": false,
+      "createdAt": "2026-10-14T14:06:48.757Z"
+    },
+    {
+      "userId": "usr-1791986807668-18fbz",
+      "title": "Work Started",
+      "message": "Work has officially started for booking HD-2026-2785.",
+      "type": "BOOKING_UPDATE",
+      "bookingId": "req-1791986808486",
+      "id": "notif-1791986808748-7wkn",
+      "isRead": false,
+      "createdAt": "2026-10-14T14:06:48.748Z"
+    },
+    {
+      "userId": "usr-1791986807668-18fbz",
+      "title": "Professional Arrived at Location",
+      "message": "Your professional has arrived at your address for booking HD-2026-2785.",
+      "type": "BOOKING_UPDATE",
+      "bookingId": "req-1791986808486",
+      "id": "notif-1791986808740-skzj",
+      "isRead": false,
+      "createdAt": "2026-10-14T14:06:48.740Z"
+    },
+    {
+      "userId": "usr-1791986807668-18fbz",
+      "title": "Professional On The Way",
+      "message": "Your professional is travelling to your location for booking HD-2026-2785.",
+      "type": "BOOKING_UPDATE",
+      "bookingId": "req-1791986808486",
+      "id": "notif-1791986808727-umql",
+      "isRead": false,
+      "createdAt": "2026-10-14T14:06:48.727Z"
+    },
+    {
+      "userId": "usr-1791986807668-18fbz",
+      "title": "Professional Accepted Your Request",
+      "message": "Kamal Silva has accepted your request HD-2026-2785.",
+      "type": "BOOKING_UPDATE",
+      "bookingId": "req-1791986808486",
+      "id": "notif-1791986808719-lzbf",
+      "isRead": false,
+      "createdAt": "2026-10-14T14:06:48.719Z"
+    },
+    {
+      "userId": "usr-1791986808589-o92o6",
+      "title": "Account Verification: APPROVED",
+      "message": "Congratulations! Your HelpDesk service provider profile has been approved. You can now go online to receive service requests.",
+      "type": "VERIFICATION",
+      "id": "notif-1791986808714-7det",
+      "isRead": false,
+      "createdAt": "2026-10-14T14:06:48.714Z"
+    },
+    {
+      "userId": "usr-admin-1",
+      "title": "New Provider Registration",
+      "message": "Kamal Silva registered as a service provider and submitted details for verification.",
+      "type": "VERIFICATION",
+      "id": "notif-1791986808595-tb44",
+      "isRead": false,
+      "createdAt": "2026-10-14T14:06:48.595Z"
+    },
+    {
+      "userId": "usr-1791986807668-18fbz",
+      "title": "Service Request Submitted",
+      "message": "Your EMERGENCY request HD-2026-2785 has been placed. Nearby verified professionals are being notified.",
+      "type": "BOOKING_UPDATE",
+      "bookingId": "req-1791986808486",
+      "id": "notif-1791986808486-947n",
+      "isRead": false,
+      "createdAt": "2026-10-14T14:06:48.486Z"
+    },
+    {
+      "userId": "usr-admin-1",
+      "title": "Provider Document Resubmission",
+      "message": "Kamal Silva re-submitted verification documents for review.",
+      "type": "VERIFICATION",
+      "id": "notif-1791986799466-86my",
+      "isRead": false,
+      "createdAt": "2026-10-14T14:06:39.466Z"
+    },
+    {
+      "userId": "usr-admin-1",
+      "title": "New Complaint Filed",
+      "message": "Complaint #cmp-1791986799439 filed on booking for: \"Inquiry regarding final invoice breakdown\"",
+      "type": "SYSTEM",
+      "bookingId": "req-1791986799142",
+      "id": "notif-1791986799439-gw9w",
+      "isRead": false,
+      "createdAt": "2026-10-14T14:06:39.439Z"
+    },
+    {
+      "userId": "usr-1791986799246-j2329",
+      "title": "New Review Received! ⭐",
+      "message": "Customer left a 5-star review for booking HD-2026-3054: \"Excellent, prompt, and solved the leak immediately...\"",
+      "type": "REVIEW",
+      "bookingId": "req-1791986799142",
+      "id": "notif-1791986799430-6uod",
+      "isRead": false,
+      "createdAt": "2026-10-14T14:06:39.430Z"
+    },
+    {
+      "userId": "usr-1791986799246-j2329",
+      "title": "Job Confirmed & Completed!",
+      "message": "Customer confirmed completion for booking HD-2026-3054. Net earnings recorded: Rs. 2,790.",
+      "type": "BOOKING_UPDATE",
+      "bookingId": "req-1791986799142",
+      "id": "notif-1791986799423-qtr9",
+      "isRead": false,
+      "createdAt": "2026-10-14T14:06:39.423Z"
+    },
+    {
+      "userId": "usr-1791986798292-xc4rb",
+      "title": "Service Completed — Please Confirm",
+      "message": "Your professional has marked booking HD-2026-3054 complete. Total: Rs. 3,100. Please review and confirm.",
+      "type": "BOOKING_UPDATE",
+      "bookingId": "req-1791986799142",
+      "id": "notif-1791986799415-i2tj",
+      "isRead": false,
+      "createdAt": "2026-10-14T14:06:39.415Z"
+    },
+    {
+      "userId": "usr-1791986799246-j2329",
+      "title": "Additional Charge Approved! ✓",
+      "message": "Customer approved your proposal for \"Heavy-Duty 1-inch PVC elbow joint and seal tape\" (Rs. 850).",
+      "type": "BOOKING_UPDATE",
+      "bookingId": "req-1791986799142",
+      "id": "notif-1791986799407-p0vt",
+      "isRead": false,
+      "createdAt": "2026-10-14T14:06:39.407Z"
+    },
+    {
+      "userId": "usr-1791986798292-xc4rb",
+      "title": "Additional Charge Proposal Received",
+      "message": "Technician proposed additional charge for MATERIALS: \"Heavy-Duty 1-inch PVC elbow joint and seal tape\" (Rs. 850). Requires your review.",
+      "type": "BOOKING_UPDATE",
+      "bookingId": "req-1791986799142",
+      "id": "notif-1791986799399-e0j8",
+      "isRead": false,
+      "createdAt": "2026-10-14T14:06:39.399Z"
+    },
+    {
+      "userId": "usr-1791986798292-xc4rb",
+      "title": "Work Started",
+      "message": "Work has officially started for booking HD-2026-3054.",
+      "type": "BOOKING_UPDATE",
+      "bookingId": "req-1791986799142",
+      "id": "notif-1791986799391-2il8",
+      "isRead": false,
+      "createdAt": "2026-10-14T14:06:39.391Z"
+    },
+    {
+      "userId": "usr-1791986798292-xc4rb",
+      "title": "Professional Arrived at Location",
+      "message": "Your professional has arrived at your address for booking HD-2026-3054.",
+      "type": "BOOKING_UPDATE",
+      "bookingId": "req-1791986799142",
+      "id": "notif-1791986799382-gp9g",
+      "isRead": false,
+      "createdAt": "2026-10-14T14:06:39.382Z"
+    },
+    {
+      "userId": "usr-1791986798292-xc4rb",
+      "title": "Professional On The Way",
+      "message": "Your professional is travelling to your location for booking HD-2026-3054.",
+      "type": "BOOKING_UPDATE",
+      "bookingId": "req-1791986799142",
+      "id": "notif-1791986799375-lm17",
+      "isRead": false,
+      "createdAt": "2026-10-14T14:06:39.375Z"
+    },
+    {
+      "userId": "usr-1791986798292-xc4rb",
+      "title": "Professional Accepted Your Request",
+      "message": "Kamal Silva has accepted your request HD-2026-3054.",
+      "type": "BOOKING_UPDATE",
+      "bookingId": "req-1791986799142",
+      "id": "notif-1791986799366-ljpt",
+      "isRead": false,
+      "createdAt": "2026-10-14T14:06:39.366Z"
+    },
+    {
+      "userId": "usr-1791986799246-j2329",
+      "title": "Account Verification: APPROVED",
+      "message": "Congratulations! Your HelpDesk service provider profile has been approved. You can now go online to receive service requests.",
+      "type": "VERIFICATION",
+      "id": "notif-1791986799361-yx0o",
+      "isRead": false,
+      "createdAt": "2026-10-14T14:06:39.361Z"
+    },
+    {
+      "userId": "usr-admin-1",
+      "title": "New Provider Registration",
+      "message": "Kamal Silva registered as a service provider and submitted details for verification.",
+      "type": "VERIFICATION",
+      "id": "notif-1791986799252-q23n",
+      "isRead": false,
+      "createdAt": "2026-10-14T14:06:39.252Z"
+    },
+    {
+      "userId": "usr-1791986798292-xc4rb",
+      "title": "Service Request Submitted",
+      "message": "Your EMERGENCY request HD-2026-3054 has been placed. Nearby verified professionals are being notified.",
+      "type": "BOOKING_UPDATE",
+      "bookingId": "req-1791986799142",
+      "id": "notif-1791986799142-9k6i",
+      "isRead": false,
+      "createdAt": "2026-10-14T14:06:39.142Z"
+    },
+    {
+      "userId": "usr-admin-1",
+      "title": "Provider Document Resubmission",
+      "message": "Kamal Silva re-submitted verification documents for review.",
+      "type": "VERIFICATION",
+      "id": "notif-1791986716909-njc3",
+      "isRead": false,
+      "createdAt": "2026-10-14T14:05:16.909Z"
+    },
+    {
+      "userId": "usr-admin-1",
+      "title": "New Complaint Filed",
+      "message": "Complaint #cmp-1791986716887 filed on booking for: \"Inquiry regarding final invoice breakdown\"",
+      "type": "SYSTEM",
+      "bookingId": "req-1791986716610",
+      "id": "notif-1791986716887-27sj",
+      "isRead": false,
+      "createdAt": "2026-10-14T14:05:16.887Z"
+    },
+    {
+      "userId": "usr-1791986716709-ttgfo",
+      "title": "New Review Received! ⭐",
+      "message": "Customer left a 5-star review for booking HD-2026-3669: \"Excellent, prompt, and solved the leak immediately...\"",
+      "type": "REVIEW",
+      "bookingId": "req-1791986716610",
+      "id": "notif-1791986716880-x1e2",
+      "isRead": false,
+      "createdAt": "2026-10-14T14:05:16.880Z"
+    },
+    {
+      "userId": "usr-1791986716709-ttgfo",
+      "title": "Job Confirmed & Completed!",
+      "message": "Customer confirmed completion for booking HD-2026-3669. Net earnings recorded: Rs. 2,790.",
+      "type": "BOOKING_UPDATE",
+      "bookingId": "req-1791986716610",
+      "id": "notif-1791986716873-lxky",
+      "isRead": false,
+      "createdAt": "2026-10-14T14:05:16.873Z"
+    },
+    {
+      "userId": "usr-1791986715715-9zfrj",
+      "title": "Service Completed — Please Confirm",
+      "message": "Your professional has marked booking HD-2026-3669 complete. Total: Rs. 3,100. Please review and confirm.",
+      "type": "BOOKING_UPDATE",
+      "bookingId": "req-1791986716610",
+      "id": "notif-1791986716863-jjxm",
+      "isRead": false,
+      "createdAt": "2026-10-14T14:05:16.863Z"
+    },
+    {
+      "userId": "usr-1791986716709-ttgfo",
+      "title": "Additional Charge Approved! ✓",
+      "message": "Customer approved your proposal for \"Heavy-Duty 1-inch PVC elbow joint and seal tape\" (Rs. 850).",
+      "type": "BOOKING_UPDATE",
+      "bookingId": "req-1791986716610",
+      "id": "notif-1791986716857-3r9t",
+      "isRead": false,
+      "createdAt": "2026-10-14T14:05:16.857Z"
+    },
+    {
+      "userId": "usr-1791986715715-9zfrj",
+      "title": "Additional Charge Proposal Received",
+      "message": "Technician proposed additional charge for MATERIALS: \"Heavy-Duty 1-inch PVC elbow joint and seal tape\" (Rs. 850). Requires your review.",
+      "type": "BOOKING_UPDATE",
+      "bookingId": "req-1791986716610",
+      "id": "notif-1791986716850-6p37",
+      "isRead": false,
+      "createdAt": "2026-10-14T14:05:16.850Z"
+    },
+    {
+      "userId": "usr-1791986715715-9zfrj",
+      "title": "Work Started",
+      "message": "Work has officially started for booking HD-2026-3669.",
+      "type": "BOOKING_UPDATE",
+      "bookingId": "req-1791986716610",
+      "id": "notif-1791986716838-hocp",
+      "isRead": false,
+      "createdAt": "2026-10-14T14:05:16.838Z"
+    },
+    {
+      "userId": "usr-1791986715715-9zfrj",
+      "title": "Professional Arrived at Location",
+      "message": "Your professional has arrived at your address for booking HD-2026-3669.",
+      "type": "BOOKING_UPDATE",
+      "bookingId": "req-1791986716610",
+      "id": "notif-1791986716832-gnx7",
+      "isRead": false,
+      "createdAt": "2026-10-14T14:05:16.832Z"
+    },
+    {
+      "userId": "usr-1791986715715-9zfrj",
+      "title": "Professional On The Way",
+      "message": "Your professional is travelling to your location for booking HD-2026-3669.",
+      "type": "BOOKING_UPDATE",
+      "bookingId": "req-1791986716610",
+      "id": "notif-1791986716826-ygep",
+      "isRead": false,
+      "createdAt": "2026-10-14T14:05:16.826Z"
+    },
+    {
+      "userId": "usr-1791986715715-9zfrj",
+      "title": "Professional Accepted Your Request",
+      "message": "Kamal Silva has accepted your request HD-2026-3669.",
+      "type": "BOOKING_UPDATE",
+      "bookingId": "req-1791986716610",
+      "id": "notif-1791986716819-4cz8",
+      "isRead": false,
+      "createdAt": "2026-10-14T14:05:16.819Z"
+    },
+    {
+      "userId": "usr-1791986716709-ttgfo",
+      "title": "Account Verification: APPROVED",
+      "message": "Congratulations! Your HelpDesk service provider profile has been approved. You can now go online to receive service requests.",
+      "type": "VERIFICATION",
+      "id": "notif-1791986716815-5l88",
+      "isRead": false,
+      "createdAt": "2026-10-14T14:05:16.815Z"
+    },
+    {
+      "userId": "usr-admin-1",
+      "title": "New Provider Registration",
+      "message": "Kamal Silva registered as a service provider and submitted details for verification.",
+      "type": "VERIFICATION",
+      "id": "notif-1791986716713-xx7k",
+      "isRead": false,
+      "createdAt": "2026-10-14T14:05:16.713Z"
+    },
+    {
+      "userId": "usr-1791986715715-9zfrj",
+      "title": "Service Request Submitted",
+      "message": "Your EMERGENCY request HD-2026-3669 has been placed. Nearby verified professionals are being notified.",
+      "type": "BOOKING_UPDATE",
+      "bookingId": "req-1791986716610",
+      "id": "notif-1791986716610-g980",
+      "isRead": false,
+      "createdAt": "2026-10-14T14:05:16.610Z"
+    },
     {
       "userId": "usr-admin-1",
       "title": "Provider Document Resubmission",
@@ -5567,9 +8038,171 @@
         "Skilled"
       ],
       "createdAt": "2026-10-11T03:31:17.002Z"
+    },
+    {
+      "id": "rev-1791986716880",
+      "bookingId": "req-1791986716610",
+      "customerId": "usr-1791986715715-9zfrj",
+      "providerId": "prv-1791986716711",
+      "rating": 5,
+      "comment": "Excellent, prompt, and solved the leak immediately! Very polite technician.",
+      "tags": [
+        "Punctual",
+        "Clean Work",
+        "Skilled"
+      ],
+      "createdAt": "2026-10-14T14:05:16.880Z"
+    },
+    {
+      "id": "rev-1791986799430",
+      "bookingId": "req-1791986799142",
+      "customerId": "usr-1791986798292-xc4rb",
+      "providerId": "prv-1791986799250",
+      "rating": 5,
+      "comment": "Excellent, prompt, and solved the leak immediately! Very polite technician.",
+      "tags": [
+        "Punctual",
+        "Clean Work",
+        "Skilled"
+      ],
+      "createdAt": "2026-10-14T14:06:39.430Z"
+    },
+    {
+      "id": "rev-1791986808789",
+      "bookingId": "req-1791986808486",
+      "customerId": "usr-1791986807668-18fbz",
+      "providerId": "prv-1791986808591",
+      "rating": 5,
+      "comment": "Excellent, prompt, and solved the leak immediately! Very polite technician.",
+      "tags": [
+        "Punctual",
+        "Clean Work",
+        "Skilled"
+      ],
+      "createdAt": "2026-10-14T14:06:48.789Z"
+    },
+    {
+      "id": "rev-1791987108700",
+      "bookingId": "req-1791987108398",
+      "customerId": "usr-1791987107308-we9us",
+      "providerId": "prv-1791987108511",
+      "rating": 5,
+      "comment": "Excellent, prompt, and solved the leak immediately! Very polite technician.",
+      "tags": [
+        "Punctual",
+        "Clean Work",
+        "Skilled"
+      ],
+      "createdAt": "2026-10-14T14:11:48.700Z"
+    },
+    {
+      "id": "rev-1791987745804",
+      "bookingId": "req-1791987745520",
+      "customerId": "usr-1791987744663-7gux7",
+      "providerId": "prv-1791987745625",
+      "rating": 5,
+      "comment": "Excellent, prompt, and solved the leak immediately! Very polite technician.",
+      "tags": [
+        "Punctual",
+        "Clean Work",
+        "Skilled"
+      ],
+      "createdAt": "2026-10-14T14:22:25.804Z"
+    },
+    {
+      "id": "rev-1791987825149",
+      "bookingId": "req-1791987824844",
+      "customerId": "usr-1791987823925-k5wkn",
+      "providerId": "prv-1791987824950",
+      "rating": 5,
+      "comment": "Excellent, prompt, and solved the leak immediately! Very polite technician.",
+      "tags": [
+        "Punctual",
+        "Clean Work",
+        "Skilled"
+      ],
+      "createdAt": "2026-10-14T14:23:45.149Z"
     }
   ],
   "complaints": [
+    {
+      "bookingId": "req-1791987824844",
+      "filedByUserId": "usr-1791987823925-k5wkn",
+      "filedByRole": "CUSTOMER",
+      "againstUserId": "usr-1791987824946-10uky",
+      "subject": "Inquiry regarding final invoice breakdown",
+      "description": "Need official VAT/tax receipt copy for company reimbursement.",
+      "id": "cmp-1791987825158",
+      "status": "RESOLVED",
+      "createdAt": "2026-10-14T14:23:45.158Z",
+      "resolutionNotes": "Invoice sent via email.",
+      "resolvedAt": "2026-10-14T14:23:45.167Z"
+    },
+    {
+      "bookingId": "req-1791987745520",
+      "filedByUserId": "usr-1791987744663-7gux7",
+      "filedByRole": "CUSTOMER",
+      "againstUserId": "usr-1791987745623-c6zrl",
+      "subject": "Inquiry regarding final invoice breakdown",
+      "description": "Need official VAT/tax receipt copy for company reimbursement.",
+      "id": "cmp-1791987745812",
+      "status": "RESOLVED",
+      "createdAt": "2026-10-14T14:22:25.812Z",
+      "resolutionNotes": "Invoice sent via email.",
+      "resolvedAt": "2026-10-14T14:22:25.821Z"
+    },
+    {
+      "bookingId": "req-1791987108398",
+      "filedByUserId": "usr-1791987107308-we9us",
+      "filedByRole": "CUSTOMER",
+      "againstUserId": "usr-1791987108509-kyfe1",
+      "subject": "Inquiry regarding final invoice breakdown",
+      "description": "Need official VAT/tax receipt copy for company reimbursement.",
+      "id": "cmp-1791987108707",
+      "status": "RESOLVED",
+      "createdAt": "2026-10-14T14:11:48.707Z",
+      "resolutionNotes": "Invoice sent via email.",
+      "resolvedAt": "2026-10-14T14:11:48.716Z"
+    },
+    {
+      "bookingId": "req-1791986808486",
+      "filedByUserId": "usr-1791986807668-18fbz",
+      "filedByRole": "CUSTOMER",
+      "againstUserId": "usr-1791986808589-o92o6",
+      "subject": "Inquiry regarding final invoice breakdown",
+      "description": "Need official VAT/tax receipt copy for company reimbursement.",
+      "id": "cmp-1791986808798",
+      "status": "RESOLVED",
+      "createdAt": "2026-10-14T14:06:48.798Z",
+      "resolutionNotes": "Invoice sent via email.",
+      "resolvedAt": "2026-10-14T14:06:48.806Z"
+    },
+    {
+      "bookingId": "req-1791986799142",
+      "filedByUserId": "usr-1791986798292-xc4rb",
+      "filedByRole": "CUSTOMER",
+      "againstUserId": "usr-1791986799246-j2329",
+      "subject": "Inquiry regarding final invoice breakdown",
+      "description": "Need official VAT/tax receipt copy for company reimbursement.",
+      "id": "cmp-1791986799439",
+      "status": "RESOLVED",
+      "createdAt": "2026-10-14T14:06:39.439Z",
+      "resolutionNotes": "Invoice sent via email.",
+      "resolvedAt": "2026-10-14T14:06:39.449Z"
+    },
+    {
+      "bookingId": "req-1791986716610",
+      "filedByUserId": "usr-1791986715715-9zfrj",
+      "filedByRole": "CUSTOMER",
+      "againstUserId": "usr-1791986716709-ttgfo",
+      "subject": "Inquiry regarding final invoice breakdown",
+      "description": "Need official VAT/tax receipt copy for company reimbursement.",
+      "id": "cmp-1791986716887",
+      "status": "RESOLVED",
+      "createdAt": "2026-10-14T14:05:16.887Z",
+      "resolutionNotes": "Invoice sent via email.",
+      "resolvedAt": "2026-10-14T14:05:16.895Z"
+    },
     {
       "bookingId": "req-1791689476738",
       "filedByUserId": "usr-1791689475935-y8e7j",

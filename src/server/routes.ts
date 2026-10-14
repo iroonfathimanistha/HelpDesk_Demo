@@ -61,8 +61,9 @@ const generateToken = (user: User) => {
 
 // ==================== AUTH ROUTES ====================
 
-// POST /api/auth/register
-router.post('/auth/register', async (req: Request, res: Response) => {
+const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+const handleRegistration = async (req: Request, res: Response, forcedRole?: UserRole) => {
   try {
     const { name, email, password, role, phone, serviceCategoryIds, experienceYears, bio, serviceAreas } = req.body;
 
@@ -70,21 +71,40 @@ router.post('/auth/register', async (req: Request, res: Response) => {
       return res.status(400).json({ error: 'Name, email, phone, and password are required' });
     }
 
-    const existing = db.findUserByEmail(email);
-    if (existing) {
+    const trimmedEmail = email.trim().toLowerCase();
+    if (!EMAIL_REGEX.test(trimmedEmail)) {
+      return res.status(400).json({ error: 'Please enter a valid email address (e.g. user@example.com)' });
+    }
+
+    if (password.length < 6) {
+      return res.status(400).json({ error: 'Password must be at least 6 characters long' });
+    }
+
+    const cleanPhone = phone.replace(/[^0-9+]/g, '');
+    if (cleanPhone.length < 7) {
+      return res.status(400).json({ error: 'Please provide a valid phone number (at least 7 digits)' });
+    }
+
+    const existingByEmail = db.findUserByEmail(trimmedEmail);
+    if (existingByEmail) {
       return res.status(400).json({ error: 'An account with this email already exists' });
     }
 
-    const assignedRole: UserRole = role === 'PROVIDER' ? 'PROVIDER' : 'CUSTOMER';
+    const existingByPhone = db.findUserByPhone(phone);
+    if (existingByPhone) {
+      return res.status(400).json({ error: 'An account with this phone number already exists' });
+    }
+
+    const assignedRole: UserRole = forcedRole || (role === 'PROVIDER' ? 'PROVIDER' : 'CUSTOMER');
     const passwordHash = bcrypt.hashSync(password, 10);
 
     const user = db.createUser({
-      name,
-      email,
+      name: name.trim(),
+      email: trimmedEmail,
       passwordHash,
       role: assignedRole,
-      phone,
-      avatarUrl: `https://api.dicebear.com/7.x/initials/svg?seed=${encodeURIComponent(name)}`,
+      phone: phone.trim(),
+      avatarUrl: `https://api.dicebear.com/7.x/initials/svg?seed=${encodeURIComponent(name.trim())}`,
       status: 'ACTIVE'
     });
 
@@ -93,9 +113,9 @@ router.post('/auth/register', async (req: Request, res: Response) => {
       const primaryCat = serviceCategoryIds?.[0] || 'cat-plumbing';
       providerProfile = db.createProviderProfile({
         userId: user.id,
-        businessName: `${name} Services`,
+        businessName: `${name.trim()} Services`,
         categoryIds: serviceCategoryIds || ['cat-plumbing'],
-        experienceYears: experienceYears || 1,
+        experienceYears: Number(experienceYears) || 1,
         bio: bio || 'Professional skilled technician registered on HelpDesk Sri Lanka.',
         serviceAreas: serviceAreas || ['Colombo 01-15'],
         workingHours: '8:00 AM - 6:00 PM',
@@ -125,7 +145,7 @@ router.post('/auth/register', async (req: Request, res: Response) => {
         db.createNotification({
           userId: admin.id,
           title: 'New Provider Registration',
-          message: `${name} registered as a service provider and submitted details for verification.`,
+          message: `${name.trim()} registered as a service provider and submitted details for verification.`,
           type: 'VERIFICATION'
         });
       });
@@ -137,23 +157,36 @@ router.post('/auth/register', async (req: Request, res: Response) => {
     res.status(201).json({
       token,
       user: safeUser,
-      providerProfile
+      providerProfile,
+      message: assignedRole === 'PROVIDER' 
+        ? 'Service provider registered successfully. Your profile is pending verification.'
+        : 'Customer registration successful!'
     });
   } catch (err: any) {
     res.status(500).json({ error: err.message || 'Registration failed' });
   }
-});
+};
 
-// POST /api/auth/login
+// Generic registration endpoint
+router.post('/auth/register', (req: Request, res: Response) => handleRegistration(req, res));
+
+// Dedicated customer registration endpoint
+router.post('/auth/register/customer', (req: Request, res: Response) => handleRegistration(req, res, 'CUSTOMER'));
+
+// Dedicated provider registration endpoint
+router.post('/auth/register/provider', (req: Request, res: Response) => handleRegistration(req, res, 'PROVIDER'));
+
+// POST /api/auth/login (supports email, phone, or identifier)
 router.post('/auth/login', async (req: Request, res: Response) => {
   try {
-    const { email, password } = req.body;
+    const { email, phone, identifier, password } = req.body;
+    const loginIdentifier = (identifier || email || phone || '').toString().trim();
 
-    if (!email || !password) {
-      return res.status(400).json({ error: 'Email and password are required' });
+    if (!loginIdentifier || !password) {
+      return res.status(400).json({ error: 'Email/phone and password are required' });
     }
 
-    const user = db.findUserByEmail(email);
+    const user = db.findUserByIdentifier(loginIdentifier);
     if (!user) {
       return res.status(401).json({ error: 'Invalid email or password' });
     }

@@ -15,7 +15,10 @@ import {
   Phone, 
   AlertCircle,
   X,
-  FileText
+  FileText,
+  Eye,
+  EyeOff,
+  MapPin
 } from 'lucide-react';
 import { ServiceCategory } from '../../types';
 
@@ -37,35 +40,56 @@ export const WelcomeScreen: React.FC<Props> = ({ onSelectRolePerspective, onOpen
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
   const [password, setPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
+  const [showPassword, setShowPassword] = useState(false);
   const [serviceCategory, setServiceCategory] = useState('cat-plumbing');
+  const [serviceArea, setServiceArea] = useState('Colombo 01-15 (Metro)');
   const [experienceYears, setExperienceYears] = useState(3);
   const [bio, setBio] = useState('');
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
+  const [successMessage, setSuccessMessage] = useState<string | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setErrorMessage(null);
+    setSuccessMessage(null);
     setIsSubmitting(true);
 
     try {
       if (authMode === 'ADMIN_SIGN_IN') {
         // Admin Login
+        if (!email.trim() || !password) {
+          throw new Error('Please enter administrator email and password.');
+        }
         await login(email.trim(), password);
         if (onSelectRolePerspective) {
           onSelectRolePerspective('ADMIN');
         }
       } else if (authMode === 'SIGN_IN') {
-        // Existing user login (Customer or Provider)
-        await login(email.trim(), password);
-        // Navigation preference only: the backend role truth will route them properly
+        // Existing user login (Customer or Provider, supports email or phone)
+        const loginIdentifier = email.trim() || phone.trim();
+        if (!loginIdentifier || !password) {
+          throw new Error('Please enter your email address or mobile number, and password.');
+        }
+        await login(loginIdentifier, password);
         if (onSelectRolePerspective) {
           onSelectRolePerspective(selectedIntent);
         }
       } else {
         // Registration
-        if (!name.trim() || !email.trim() || !phone.trim() || !password) {
-          throw new Error('Please fill all required registration fields.');
+        if (!name.trim()) throw new Error('Full Name is required.');
+        if (!email.trim()) throw new Error('Email address is required.');
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim())) {
+          throw new Error('Please enter a valid email address (e.g. user@example.com).');
+        }
+        if (!phone.trim()) throw new Error('Mobile number is required.');
+        if (!password) throw new Error('Password is required.');
+        if (password.length < 6) {
+          throw new Error('Password must be at least 6 characters long.');
+        }
+        if (password !== confirmPassword) {
+          throw new Error('Passwords do not match. Please re-enter confirm password.');
         }
 
         const payload: any = {
@@ -78,15 +102,23 @@ export const WelcomeScreen: React.FC<Props> = ({ onSelectRolePerspective, onOpen
 
         if (selectedIntent === 'PROVIDER') {
           payload.serviceCategoryIds = [serviceCategory];
-          payload.experienceYears = Number(experienceYears);
+          payload.experienceYears = Number(experienceYears) || 1;
           payload.bio = bio.trim() || 'Professional service partner on HelpDesk.';
-          payload.serviceAreas = ['Colombo 01-15', 'Dehiwala', 'Mount Lavinia'];
+          payload.serviceAreas = [serviceArea];
         }
 
         await register(payload);
-        if (onSelectRolePerspective) {
-          onSelectRolePerspective(selectedIntent);
-        }
+        setSuccessMessage(
+          selectedIntent === 'PROVIDER'
+            ? 'Provider registration submitted! Account is pending admin approval.'
+            : 'Registration complete! Welcome to HelpDesk.'
+        );
+
+        setTimeout(() => {
+          if (onSelectRolePerspective) {
+            onSelectRolePerspective(selectedIntent);
+          }
+        }, 1200);
       }
     } catch (err: any) {
       setErrorMessage(err.message || 'Authentication failed. Please check credentials.');
@@ -96,8 +128,8 @@ export const WelcomeScreen: React.FC<Props> = ({ onSelectRolePerspective, onOpen
   };
 
   return (
-    <div className="min-h-[85vh] bg-gradient-to-b from-slate-900 via-slate-900 to-slate-950 text-white flex flex-col justify-center items-center py-8 px-4 sm:px-6">
-      <div className="w-full max-w-4xl space-y-8">
+    <div className="w-full h-full overflow-y-auto bg-gradient-to-b from-slate-900 via-slate-900 to-slate-950 text-white flex flex-col justify-start py-6 px-4 sm:px-6">
+      <div className="w-full max-w-md mx-auto space-y-6">
         
         {/* Brand & Introduction */}
         <div className="text-center space-y-3">
@@ -257,6 +289,14 @@ export const WelcomeScreen: React.FC<Props> = ({ onSelectRolePerspective, onOpen
             </div>
           )}
 
+          {/* Inline Success Banner */}
+          {successMessage && (
+            <div className="mb-4 p-3 rounded-xl bg-emerald-500/20 border border-emerald-500/40 text-emerald-200 text-xs flex items-start gap-2 animate-in fade-in">
+              <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
+              <span>{successMessage}</span>
+            </div>
+          )}
+
           {/* Form */}
           <form onSubmit={handleSubmit} className="space-y-4 text-xs">
             
@@ -321,6 +361,26 @@ export const WelcomeScreen: React.FC<Props> = ({ onSelectRolePerspective, onOpen
                       </select>
                     </div>
 
+                    <div>
+                      <label className="block text-slate-300 font-bold mb-1">Service Area / District</label>
+                      <div className="relative">
+                        <MapPin className="w-4 h-4 text-slate-400 absolute left-3 top-2.5" />
+                        <select
+                          value={serviceArea}
+                          onChange={(e) => setServiceArea(e.target.value)}
+                          className="w-full pl-9 pr-3 py-2 bg-slate-900 border border-slate-700 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-teal-500"
+                        >
+                          <option value="Colombo 01-15 (Metro)">Colombo 01-15 (Metro)</option>
+                          <option value="Dehiwala / Mount Lavinia">Dehiwala / Mount Lavinia</option>
+                          <option value="Rajagiriya / Battaramulla">Rajagiriya / Battaramulla</option>
+                          <option value="Gampaha District">Gampaha District</option>
+                          <option value="Kandy & Central Province">Kandy & Central Province</option>
+                          <option value="Galle & Southern Coastal">Galle & Southern Coastal</option>
+                          <option value="Kalutara District">Kalutara District</option>
+                        </select>
+                      </div>
+                    </div>
+
                     <div className="grid grid-cols-2 gap-2">
                       <div>
                         <label className="block text-slate-300 font-bold mb-1">Experience (Years)</label>
@@ -359,18 +419,22 @@ export const WelcomeScreen: React.FC<Props> = ({ onSelectRolePerspective, onOpen
               </>
             )}
 
-            {/* Email Field */}
+            {/* Email / Identifier Field */}
             <div>
-              <label className="block text-slate-300 font-bold mb-1">Email Address *</label>
+              <label className="block text-slate-300 font-bold mb-1">
+                {authMode === 'SIGN_IN' ? 'Email Address or Mobile Number *' : 'Email Address *'}
+              </label>
               <div className="relative">
                 <Mail className="w-4 h-4 text-slate-400 absolute left-3 top-3" />
                 <input
-                  type="email"
+                  type={authMode === 'SIGN_IN' ? 'text' : 'email'}
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder={
                     authMode === 'ADMIN_SIGN_IN' 
                       ? 'admin@helpdesk.lk' 
+                      : authMode === 'SIGN_IN'
+                      ? 'dinuka@gmail.com or +94 77 234 5678'
                       : selectedIntent === 'PROVIDER' 
                       ? 'kasun.plumber@helpdesk.lk' 
                       : 'dinuka@gmail.com'
@@ -392,15 +456,41 @@ export const WelcomeScreen: React.FC<Props> = ({ onSelectRolePerspective, onOpen
               <div className="relative">
                 <Lock className="w-4 h-4 text-slate-400 absolute left-3 top-3" />
                 <input
-                  type="password"
+                  type={showPassword ? 'text' : 'password'}
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   placeholder="••••••••••••"
                   required
-                  className="w-full pl-9 pr-3 py-2.5 bg-slate-900 border border-slate-700 rounded-xl text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full pl-9 pr-10 py-2.5 bg-slate-900 border border-slate-700 rounded-xl text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
+                <button
+                  type="button"
+                  onClick={() => setShowPassword(!showPassword)}
+                  className="absolute right-3 top-3 text-slate-400 hover:text-slate-200 transition"
+                  title={showPassword ? 'Hide password' : 'Show password'}
+                >
+                  {showPassword ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
+                </button>
               </div>
             </div>
+
+            {/* Confirm Password Field (Register Only) */}
+            {authMode === 'REGISTER' && (
+              <div>
+                <label className="block text-slate-300 font-bold mb-1">Confirm Password *</label>
+                <div className="relative">
+                  <Lock className="w-4 h-4 text-slate-400 absolute left-3 top-3" />
+                  <input
+                    type={showPassword ? 'text' : 'password'}
+                    value={confirmPassword}
+                    onChange={(e) => setConfirmPassword(e.target.value)}
+                    placeholder="Re-enter your password"
+                    required
+                    className="w-full pl-9 pr-10 py-2.5 bg-slate-900 border border-slate-700 rounded-xl text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  />
+                </div>
+              </div>
+            )}
 
             {/* Submit Action Button */}
             <div className="pt-2">
